@@ -1,396 +1,56 @@
 [ {
   "@id" : "_:genid1",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
-  "http://www.w3.org/2002/07/owl#oneOf" : [ {
-    "@list" : [ {
-      "@value" : "Friday"
-    }, {
-      "@value" : "Monday"
-    }, {
-      "@value" : "Saturday"
-    }, {
-      "@value" : "Sunday"
-    }, {
-      "@value" : "Thursday"
-    }, {
-      "@value" : "Tuesday"
-    }, {
-      "@value" : "Wednesday"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid100",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#occupantGender"
-  } ]
-}, {
-  "@id" : "_:genid101",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#occupantJobtype"
-  } ]
-}, {
-  "@id" : "_:genid102",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#occupantLifestyle"
-  } ]
-}, {
-  "@id" : "_:genid103",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#occupantName"
-  } ]
-}, {
-  "@id" : "_:genid104",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#relatedTo"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"
-  } ]
-}, {
-  "@id" : "_:genid105",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#relatedTo"
-  } ]
-}, {
-  "@id" : "_:genid106",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#maxRangeValue"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ]
-}, {
-  "@id" : "_:genid107",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#minRangeValue"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ]
-}, {
-  "@id" : "_:genid108",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#duration"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ]
-}, {
-  "@id" : "_:genid109",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#endTime"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ]
-}, {
-  "@id" : "_:genid110",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#startTime"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ]
-}, {
-  "@id" : "_:genid111",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid112"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#controlType"
-  } ]
-}, {
-  "@id" : "_:genid112",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
-  "http://www.w3.org/2002/07/owl#oneOf" : [ {
-    "@list" : [ {
-      "@value" : "adjustable"
-    }, {
-      "@value" : "fixed"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid115",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Meeting"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#hasMeeting"
-  } ]
-}, {
-  "@id" : "_:genid116",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Occupant"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#hasOccupant"
-  } ]
-}, {
-  "@id" : "_:genid117",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#System"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#hasSystem"
-  } ]
-}, {
-  "@id" : "_:genid118",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#identifier"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-  } ]
-}, {
-  "@id" : "_:genid119",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#spaceType"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid2147483670"
-  } ]
-}, {
-  "@id" : "_:genid129",
-  "@type" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns#List" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
-    "@value" : "Corridor"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
-    "@list" : [ {
-      "@value" : "MeetingRoom"
-    }, {
-      "@value" : "Office"
-    }, {
-      "@value" : "OfficePrivate"
-    }, {
-      "@value" : "OfficeShared"
-    }, {
-      "@value" : "Other"
-    }, {
-      "@value" : "Outdoor"
-    }, {
-      "@value" : "ResidentialOwn"
-    }, {
-      "@value" : "ResidentialRent"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid130",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#description"
-  } ]
-}, {
-  "@id" : "_:genid131",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#maxNumberOccupants"
-  } ]
-}, {
-  "@id" : "_:genid132",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#minNumberOccupants"
-  } ]
-}, {
-  "@id" : "_:genid133",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid2147483671"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#spaceType"
-  } ]
-}, {
-  "@id" : "_:genid134",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#definedBySpace"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Space"
-  } ]
-}, {
-  "@id" : "_:genid135",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#duration"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ]
-}, {
-  "@id" : "_:genid136",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#percentTimePresence"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ]
-}, {
-  "@id" : "_:genid137",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#standardType"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid2147483672"
-  } ]
-}, {
-  "@id" : "_:genid141",
-  "@type" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns#List" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#first" : [ {
-    "@value" : "ASHRAE Adaptive Comfort"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest" : [ {
-    "@list" : [ {
-      "@value" : "ASHRAE Comfort Envelop"
-    }, {
-      "@value" : "ISO Adaptive Comfort"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid142",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid2147483673"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#standardType"
-  } ]
-}, {
-  "@id" : "_:genid143",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#identifier"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-  } ]
-}, {
-  "@id" : "_:genid144",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#hasThermalComfortEnvelop"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#ThermalComfortEnvelop"
-  } ]
-}, {
-  "@id" : "_:genid145",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid146"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#controlType"
-  } ]
-}, {
-  "@id" : "_:genid146",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
-  "http://www.w3.org/2002/07/owl#oneOf" : [ {
-    "@list" : [ {
-      "@value" : "adjustable"
-    }, {
-      "@value" : "fixed"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid149",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#definedByParameterRange"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#definedByRange"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#ParameterRange"
   } ]
 }, {
-  "@id" : "_:genid15",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
-  "http://www.w3.org/2002/07/owl#oneOf" : [ {
-    "@list" : [ {
-      "@value" : "Corridor"
-    }, {
-      "@value" : "MeetingRoom"
-    }, {
-      "@value" : "Office"
-    }, {
-      "@value" : "OfficePrivate"
-    }, {
-      "@value" : "OfficeShared"
-    }, {
-      "@value" : "Other"
-    }, {
-      "@value" : "Outdoor"
-    }, {
-      "@value" : "ResidentialOwn"
-    }, {
-      "@value" : "ResidentialRent"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid150",
+  "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid151"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Space"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#controlType"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#hasSpace"
   } ]
 }, {
-  "@id" : "_:genid151",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
-  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+  "@id" : "_:genid100",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@value" : "fixed"
+      "@id" : "http://www.semanticweb.org/bimmer/ob#ConstantValueFormula"
     }, {
-      "@value" : "operable"
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Linear1DFormula"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Linear2DFormula"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Linear3DFormula"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Logit2DLinearFormula"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Logit3DLinearFormula"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Logit4DLinearFormula"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Quadratic1DFormula"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Weibull1DFormula"
     } ]
   } ]
 }, {
-  "@id" : "_:genid154",
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#identifier"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid110",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -414,7 +74,16 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid164",
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#buildingAddress"
+  } ]
+}, {
+  "@id" : "_:genid120",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -432,76 +101,21 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid2147483670",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
-  "http://www.w3.org/2002/07/owl#oneOf" : [ {
-    "@id" : "_:genid129"
+  "@id" : "_:genid127",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Inaction"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Interaction"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Movement"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Report"
+    } ]
   } ]
 }, {
-  "@id" : "_:genid2147483671",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
-  "http://www.w3.org/2002/07/owl#oneOf" : [ {
-    "@id" : "_:genid129"
-  } ]
-}, {
-  "@id" : "_:genid2147483672",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
-  "http://www.w3.org/2002/07/owl#oneOf" : [ {
-    "@id" : "_:genid141"
-  } ]
-}, {
-  "@id" : "_:genid2147483673",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
-  "http://www.w3.org/2002/07/owl#oneOf" : [ {
-    "@id" : "_:genid141"
-  } ]
-}, {
-  "@id" : "_:genid25",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#definedByParameterRange"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#ParameterRange"
-  } ]
-}, {
-  "@id" : "_:genid26",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#hasAction"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Action"
-  } ]
-}, {
-  "@id" : "_:genid27",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Driver"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#hasDriver"
-  } ]
-}, {
-  "@id" : "_:genid28",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Need"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#hasNeed"
-  } ]
-}, {
-  "@id" : "_:genid29",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#System"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#interactWith"
-  } ]
-}, {
-  "@id" : "_:genid30",
+  "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -510,52 +124,19 @@
     "@id" : "http://www.semanticweb.org/bimmer/ob#description"
   } ]
 }, {
-  "@id" : "_:genid31",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#hasSpace"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Space"
+  "@id" : "_:genid132",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#ASHRAEAdaptiveComfort"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#ASHRAEComfortEnvelop"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#ISOAdaptiveComfort"
+    } ]
   } ]
 }, {
-  "@id" : "_:genid32",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Space"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#hasSpace"
-  } ]
-}, {
-  "@id" : "_:genid33",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#identifier"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-  } ]
-}, {
-  "@id" : "_:genid34",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#buildingAddress"
-  } ]
-}, {
-  "@id" : "_:genid35",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#description"
-  } ]
-}, {
-  "@id" : "_:genid36",
+  "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#coefficientName"
@@ -564,7 +145,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "_:genid37",
+  "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#coefficientValue"
@@ -573,129 +154,79 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "_:genid38",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#DriverTime"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#hasDriverTime"
-  } ]
-}, {
-  "@id" : "_:genid39",
+  "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#Environment"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#hasEnvironment"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#influencedByEnvironment"
   } ]
 }, {
-  "@id" : "_:genid40",
+  "@id" : "_:genid17",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Habit"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#DriverTime"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#influencedByHabit"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#occursAt"
   } ]
 }, {
-  "@id" : "_:genid41",
+  "@id" : "_:genid18",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#Space"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#occursWithinSpace"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#occursIn"
   } ]
 }, {
-  "@id" : "_:genid42",
+  "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#DriverEvent"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#triggeredByEvent"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#triggeredBy"
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#leadsTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Action"
+  } ]
+}, {
+  "@id" : "_:genid20",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid44"
+    "@id" : "http://www.w3.org/2006/time#DayOfWeek"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#dayOfWeek"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#hasDayOfWeek"
   } ]
 }, {
-  "@id" : "_:genid44",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
-  "http://www.w3.org/2002/07/owl#oneOf" : [ {
-    "@list" : [ {
-      "@value" : "Friday"
-    }, {
-      "@value" : "Monday"
-    }, {
-      "@value" : "Saturday"
-    }, {
-      "@value" : "Sunday"
-    }, {
-      "@value" : "Thursday"
-    }, {
-      "@value" : "Tuesday"
-    }, {
-      "@value" : "Wednesday"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid52",
+  "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid53"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Season"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#seasonTime"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#hasSeason"
   } ]
 }, {
-  "@id" : "_:genid53",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
-  "http://www.w3.org/2002/07/owl#oneOf" : [ {
-    "@list" : [ {
-      "@value" : "All"
-    }, {
-      "@value" : "Fall"
-    }, {
-      "@value" : "Spring"
-    }, {
-      "@value" : "Summer"
-    }, {
-      "@value" : "Winter"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid59",
+  "@id" : "_:genid22",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid60"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#TimeOfDay"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#timeOfDay"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#hasTimeOfDay"
   } ]
 }, {
-  "@id" : "_:genid60",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
-  "http://www.w3.org/2002/07/owl#oneOf" : [ {
-    "@list" : [ {
-      "@value" : "evening"
-    }, {
-      "@value" : "midnight"
-    }, {
-      "@value" : "morning"
-    }, {
-      "@value" : "noon"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid65",
+  "@id" : "_:genid23",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#hasEnvironmentParameter"
@@ -704,7 +235,7 @@
     "@id" : "http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"
   } ]
 }, {
-  "@id" : "_:genid66",
+  "@id" : "_:genid24",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"
@@ -713,16 +244,16 @@
     "@id" : "http://www.semanticweb.org/bimmer/ob#hasEnvironmentParameter"
   } ]
 }, {
-  "@id" : "_:genid67",
+  "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#identifier"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "_:genid68",
+  "@id" : "_:genid26",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#parameterUnit"
@@ -731,7 +262,392 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#description"
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#parameterName"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#detailedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#DriverEvent"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Driver"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#drivenBy"
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#programmedAt"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Schedule"
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#typicalTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#definedByRange"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#ParameterRange"
+  } ]
+}, {
+  "@id" : "_:genid33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#modeledBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#InteractionFormula"
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#controlValue"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#hasCoefficient"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#CoefficientSchema"
+  } ]
+}, {
+  "@id" : "_:genid36",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#hasIndependentVariable"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"
+  } ]
+}, {
+  "@id" : "_:genid37",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#description"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid38",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#programmedAt"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Schedule"
+  } ]
+}, {
+  "@id" : "_:genid39",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#meetingProbability"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Need"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#influencedByNeed"
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#modeledBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#MovementModel"
+  } ]
+}, {
+  "@id" : "_:genid41",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#specifiedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#MovementSpecification"
+  } ]
+}, {
+  "@id" : "_:genid42",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#definedByRange"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#ParameterRange"
+  } ]
+}, {
+  "@id" : "_:genid43",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#hasBehavior"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Behavior"
+  } ]
+}, {
+  "@id" : "_:genid44",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Behavior"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#hasBehavior"
+  } ]
+}, {
+  "@id" : "_:genid45",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#identifier"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid46",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#occupantAge"
+  } ]
+}, {
+  "@id" : "_:genid47",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#occupantGender"
+  } ]
+}, {
+  "@id" : "_:genid48",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#occupantJobtype"
+  } ]
+}, {
+  "@id" : "_:genid49",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#occupantLifestyle"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#System"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#interactsWith"
+  } ]
+}, {
+  "@id" : "_:genid50",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#occupantName"
+  } ]
+}, {
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#relatedTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"
+  } ]
+}, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#maxRangeValue"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#minRangeValue"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "_:genid54",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#duration"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "_:genid55",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#endTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "_:genid56",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#startTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "_:genid57",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#All"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Fall"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Spring"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Summer"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Winter"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#identifier"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid63",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#hasSpaceType"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#SpaceType"
+  } ]
+}, {
+  "@id" : "_:genid64",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Meeting"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#hasMeeting"
+  } ]
+}, {
+  "@id" : "_:genid65",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Occupant"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#hasOccupant"
+  } ]
+}, {
+  "@id" : "_:genid66",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#System"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#hasSystem"
+  } ]
+}, {
+  "@id" : "_:genid67",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#identifier"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid68",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#description"
+  } ]
+}, {
   "@id" : "_:genid69",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#maxNumberOccupants"
+  } ]
+}, {
+  "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -743,217 +659,61 @@
   "@id" : "_:genid70",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#parameterName"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#minNumberOccupants"
   } ]
 }, {
   "@id" : "_:genid71",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#controlType"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#detailedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Space"
   } ]
 }, {
   "@id" : "_:genid72",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#definedByEvent"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#duration"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#DriverEvent"
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
   "@id" : "_:genid73",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#hasSchedule"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#percentTimePresence"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Schedule"
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "_:genid74",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid75"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#controlType"
-  } ]
-}, {
-  "@id" : "_:genid75",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
-      "@value" : "controllable"
+      "@id" : "http://www.semanticweb.org/bimmer/ob#ASHRAEAdaptiveComfort"
     }, {
-      "@value" : "zonal cotrollable"
+      "@id" : "http://www.semanticweb.org/bimmer/ob#ASHRAEComfortEnvelop"
     }, {
-      "@value" : "zonal fixed"
+      "@id" : "http://www.semanticweb.org/bimmer/ob#ISOAdaptiveComfort"
     } ]
+  } ]
+}, {
+  "@id" : "_:genid78",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#ControlType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#operationMode"
   } ]
 }, {
   "@id" : "_:genid79",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#definedByParameterRange"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#ParameterRange"
-  } ]
-}, {
-  "@id" : "_:genid80",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#modeledByFormula"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#InteractionFormula"
-  } ]
-}, {
-  "@id" : "_:genid81",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#description"
-  } ]
-}, {
-  "@id" : "_:genid82",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#interactionType"
-  } ]
-}, {
-  "@id" : "_:genid83",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#hasCoefficient"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#CoefficientSchema"
-  } ]
-}, {
-  "@id" : "_:genid84",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#hasIndependentVariable"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"
-  } ]
-}, {
-  "@id" : "_:genid85",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#description"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "_:genid86",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid87"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#controlType"
-  } ]
-}, {
-  "@id" : "_:genid87",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
-  "http://www.w3.org/2002/07/owl#oneOf" : [ {
-    "@list" : [ {
-      "@value" : "dimmable"
-    }, {
-      "@value" : "on/off"
-    }, {
-      "@value" : "three steps"
-    }, {
-      "@value" : "two steps"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid9",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
-  "http://www.w3.org/2002/07/owl#oneOf" : [ {
-    "@list" : [ {
-      "@value" : "All"
-    }, {
-      "@value" : "Fall"
-    }, {
-      "@value" : "Spring"
-    }, {
-      "@value" : "Summer"
-    }, {
-      "@value" : "Winter"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid92",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#hasSchedule"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Schedule"
-  } ]
-}, {
-  "@id" : "_:genid93",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#meetingProbability"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-  } ]
-}, {
-  "@id" : "_:genid94",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#modeledByModel"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#MovementModel"
-  } ]
-}, {
-  "@id" : "_:genid95",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#specifiedBy"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#MovementSpecification"
-  } ]
-}, {
-  "@id" : "_:genid96",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#definedByParameterRange"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#ParameterRange"
-  } ]
-}, {
-  "@id" : "_:genid97",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#hasBehavior"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Behavior"
-  } ]
-}, {
-  "@id" : "_:genid98",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#identifier"
@@ -962,25 +722,94 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "_:genid99",
+  "@id" : "_:genid8",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#occupantAge"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#hasBuildingType"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#BuildingType"
+  } ]
+}, {
+  "@id" : "_:genid80",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#definedByEnvelop"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#ThermalComfortEnvelop"
+  } ]
+}, {
+  "@id" : "_:genid81",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Evening"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Midnight"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Morning"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Noon"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid86",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#definedByRange"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#ParameterRange"
+  } ]
+}, {
+  "@id" : "_:genid87",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2006/time#Friday"
+    }, {
+      "@id" : "http://www.w3.org/2006/time#Monday"
+    }, {
+      "@id" : "http://www.w3.org/2006/time#Saturday"
+    }, {
+      "@id" : "http://www.w3.org/2006/time#Sunday"
+    }, {
+      "@id" : "http://www.w3.org/2006/time#Thursday"
+    }, {
+      "@id" : "http://www.w3.org/2006/time#Tuesday"
+    }, {
+      "@id" : "http://www.w3.org/2006/time#Wednesday"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#hasSpace"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Space"
+  } ]
+}, {
+  "@id" : "_:genid95",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#AccousticNeed"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#IAQNeed"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#ThermalNeed"
+    }, {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#VisualNeed"
+    } ]
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/publisher",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/title",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://purl.org/dc/elements/1.1publisher",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://purl.org/dc/elements/1.1title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/creator",
@@ -994,13 +823,6 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://purl.org/dc/elements/1.1publisher" : [ {
-    "@id" : "http://www.oeg-upm.net/"
-  } ],
-  "http://purl.org/dc/elements/1.1title" : [ {
-    "@language" : "en",
-    "@value" : "Ontology model for Occupancy Behavior"
-  } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob"
   } ],
@@ -1016,6 +838,12 @@
     "@value" : "0.0.1"
   } ]
 }, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#ASHRAEAdaptiveComfort",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/bimmer/ob#StandardThermalEnvelop" ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#ASHRAEComfortEnvelop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/bimmer/ob#StandardThermalEnvelop" ]
+}, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#AccousticNeed",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1025,19 +853,22 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#PhysicalNeed"
   }, {
-    "@id" : "_:genid25"
+    "@id" : "_:genid1"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Action",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The action the occupant performs to satisfy its need."
+    "@value" : "Actions are the interactions with systems or activities that occupants can perform to achieve environmental comfort."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Action"
   } ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#All",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/bimmer/ob#Season" ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Behavior",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -1050,15 +881,17 @@
     "@value" : "Behavior"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid26"
+    "@id" : "_:genid2"
   }, {
-    "@id" : "_:genid27"
+    "@id" : "_:genid3"
   }, {
-    "@id" : "_:genid28"
+    "@id" : "_:genid4"
   }, {
-    "@id" : "_:genid29"
+    "@id" : "_:genid5"
   }, {
-    "@id" : "_:genid30"
+    "@id" : "_:genid6"
+  }, {
+    "@id" : "_:genid7"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Building",
@@ -1072,16 +905,21 @@
     "@value" : "Building"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid31"
+    "@id" : "_:genid8"
   }, {
-    "@id" : "_:genid32"
+    "@id" : "_:genid9"
   }, {
-    "@id" : "_:genid33"
+    "@id" : "_:genid10"
   }, {
-    "@id" : "_:genid34"
+    "@id" : "_:genid11"
   }, {
-    "@id" : "_:genid35"
+    "@id" : "_:genid12"
+  }, {
+    "@id" : "_:genid13"
   } ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#BuildingType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#CoefficientSchema",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -1094,13 +932,17 @@
     "@value" : "Coefficient Schema"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid36"
+    "@id" : "_:genid14"
   }, {
-    "@id" : "_:genid37"
+    "@id" : "_:genid15"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#ConstantValueFormula",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent mathematical formulas of the type Constant Value."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Constant Value Formula"
@@ -1108,6 +950,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#InteractionFormula"
   } ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#ControlType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#DaylightFactorParameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -1127,22 +972,20 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Circumstances that motivate the occupant behavior."
+    "@value" : "Drivers represent the environmental factors that stimulate occupants to fulfill a physical, physiological or psychological need."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Driver"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid38"
+    "@id" : "_:genid16"
   }, {
-    "@id" : "_:genid39"
+    "@id" : "_:genid17"
   }, {
-    "@id" : "_:genid40"
+    "@id" : "_:genid18"
   }, {
-    "@id" : "_:genid41"
-  }, {
-    "@id" : "_:genid42"
+    "@id" : "_:genid19"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#DriverEvent",
@@ -1163,11 +1006,11 @@
     "@value" : "Driver Time"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid43"
+    "@id" : "_:genid20"
   }, {
-    "@id" : "_:genid52"
+    "@id" : "_:genid21"
   }, {
-    "@id" : "_:genid59"
+    "@id" : "_:genid22"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Environment",
@@ -1181,9 +1024,9 @@
     "@value" : "Environment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid65"
+    "@id" : "_:genid23"
   }, {
-    "@id" : "_:genid66"
+    "@id" : "_:genid24"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#EnvironmentParameter",
@@ -1197,13 +1040,13 @@
     "@value" : "Environment Parameter"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid67"
+    "@id" : "_:genid25"
   }, {
-    "@id" : "_:genid68"
+    "@id" : "_:genid26"
   }, {
-    "@id" : "_:genid69"
+    "@id" : "_:genid27"
   }, {
-    "@id" : "_:genid70"
+    "@id" : "_:genid28"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Equipment",
@@ -1217,9 +1060,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#System"
-  }, {
-    "@id" : "_:genid71"
   } ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#Evening",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/bimmer/ob#TimeOfDay" ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#EventSpecification",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -1230,10 +1074,18 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#MovementSpecification"
   }, {
-    "@id" : "_:genid72"
+    "@id" : "_:genid29"
   }, {
-    "@id" : "_:genid73"
+    "@id" : "_:genid30"
+  }, {
+    "@id" : "_:genid31"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#SpaceOccupancySpecification"
   } ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#Fall",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/bimmer/ob#Season" ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#GlareParameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -1257,8 +1109,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#System"
-  }, {
-    "@id" : "_:genid74"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Habit",
@@ -1281,7 +1131,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#PhysicalNeed"
   }, {
-    "@id" : "_:genid79"
+    "@id" : "_:genid32"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#IAQParameter",
@@ -1297,6 +1147,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"
   } ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#ISOAdaptiveComfort",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/bimmer/ob#StandardThermalEnvelop" ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#IlluminanceParameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -1316,7 +1169,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The Inaction class represents the decision of an occupant to not act and remain uncomfortable within a space"
+    "@value" : "The Inaction class represents the decision of an occupant to not act and remain uncomfortable within a space."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1339,25 +1192,27 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#Action"
   }, {
-    "@id" : "_:genid80"
+    "@id" : "_:genid33"
   }, {
-    "@id" : "_:genid81"
-  }, {
-    "@id" : "_:genid82"
+    "@id" : "_:genid34"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#InteractionFormula",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Formula to model the probability of interaction between ocupant and system."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Interaction Formula"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid83"
+    "@id" : "_:genid35"
   }, {
-    "@id" : "_:genid84"
+    "@id" : "_:genid36"
   }, {
-    "@id" : "_:genid85"
+    "@id" : "_:genid37"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Light",
@@ -1368,12 +1223,14 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#System"
-  }, {
-    "@id" : "_:genid86"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Linear1DFormula",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent mathematical formulas of the type Linear 1D."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Linear 1D Formula"
@@ -1384,6 +1241,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Linear2DFormula",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent mathematical formulas of the type Linear 2D."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Linear 2D Formula"
@@ -1394,6 +1255,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Linear3DFormula",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent mathematical formulas of the type Linear 3D."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Linear 3D Formula"
@@ -1404,6 +1269,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Logit2DLinearFormula",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent mathematical formulas of the type Logit 2D Linear."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Logit 2D Linear Formula"
@@ -1414,6 +1283,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Logit3DLinearFormula",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent mathematical formulas of the type Logit 3D Linear."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Logit 3D Linear Formula"
@@ -1424,6 +1297,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Logit4DLinearFormula",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent mathematical formulas of the type Logit 4D Linear."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Logit 4D Linear Formula"
@@ -1443,10 +1320,16 @@
     "@value" : "Meeting"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid92"
+    "@id" : "_:genid38"
   }, {
-    "@id" : "_:genid93"
+    "@id" : "_:genid39"
   } ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#Midnight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/bimmer/ob#TimeOfDay" ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#Morning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/bimmer/ob#TimeOfDay" ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Movement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -1461,21 +1344,29 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#Action"
   }, {
-    "@id" : "_:genid94"
+    "@id" : "_:genid40"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#MovementModel",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Model to define ocuppants movements inside a space"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Movement Model"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid95"
+    "@id" : "_:genid41"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#MovementSpecification",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent the data needed to model movements inside a space."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Movement Specification"
@@ -1483,6 +1374,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Need",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Needs represent the physical and non-physical requirements of the occupant that must be met in order to ensure satisfaction with their environment."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Need"
@@ -1504,6 +1399,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#NonPhysicalNeed",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Non physical comfort need that could lead to a behavior, such as privacy, schedule, etc."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Non Physical Need"
@@ -1524,11 +1423,14 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#ThermalComfortEnvelop"
   }, {
-    "@id" : "_:genid96"
+    "@id" : "_:genid42"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#StandardThermalEnvelop"
   } ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#Noon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/bimmer/ob#TimeOfDay" ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Occupant",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -1541,43 +1443,47 @@
     "@value" : "Occupant"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid97"
+    "@id" : "_:genid43"
   }, {
-    "@id" : "_:genid98"
+    "@id" : "_:genid44"
   }, {
-    "@id" : "_:genid99"
+    "@id" : "_:genid45"
   }, {
-    "@id" : "_:genid100"
+    "@id" : "_:genid46"
   }, {
-    "@id" : "_:genid101"
+    "@id" : "_:genid47"
   }, {
-    "@id" : "_:genid102"
+    "@id" : "_:genid48"
   }, {
-    "@id" : "_:genid103"
+    "@id" : "_:genid49"
+  }, {
+    "@id" : "_:genid50"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#ParameterRange",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "N-ary class to represent the minimum and maximm comfort values for an occupant."
+    "@value" : "N-ary class to represent the minimum and maximm comfort values with respect to an environmental parameter."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Parameter Range"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid104"
+    "@id" : "_:genid51"
   }, {
-    "@id" : "_:genid105"
+    "@id" : "_:genid52"
   }, {
-    "@id" : "_:genid106"
-  }, {
-    "@id" : "_:genid107"
+    "@id" : "_:genid53"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#PhysicalNeed",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Physical comfort need that could lead to a behavior."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Physical Need"
@@ -1588,6 +1494,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Quadratic1DFormula",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent mathematical formulas of the type Quadratic 1D Linear."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Quadratic 1D Formula"
@@ -1640,16 +1550,30 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Schedule",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "N-ary class to represent the duration, start time and end time of an event."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Schedule"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid108"
+    "@id" : "_:genid54"
   }, {
-    "@id" : "_:genid109"
+    "@id" : "_:genid55"
   }, {
-    "@id" : "_:genid110"
+    "@id" : "_:genid56"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#Season",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Season"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid57"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Shade",
@@ -1660,8 +1584,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#System"
-  }, {
-    "@id" : "_:genid111"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#SolarIrradianceParameter",
@@ -1688,23 +1610,21 @@
     "@value" : "Space"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid115"
+    "@id" : "_:genid63"
   }, {
-    "@id" : "_:genid116"
+    "@id" : "_:genid64"
   }, {
-    "@id" : "_:genid117"
+    "@id" : "_:genid65"
   }, {
-    "@id" : "_:genid118"
+    "@id" : "_:genid66"
   }, {
-    "@id" : "_:genid119"
+    "@id" : "_:genid67"
   }, {
-    "@id" : "_:genid130"
+    "@id" : "_:genid68"
   }, {
-    "@id" : "_:genid131"
+    "@id" : "_:genid69"
   }, {
-    "@id" : "_:genid132"
-  }, {
-    "@id" : "_:genid133"
+    "@id" : "_:genid70"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#SpaceOccupancySpecification",
@@ -1716,12 +1636,18 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#MovementSpecification"
   }, {
-    "@id" : "_:genid134"
+    "@id" : "_:genid71"
   }, {
-    "@id" : "_:genid135"
+    "@id" : "_:genid72"
   }, {
-    "@id" : "_:genid136"
+    "@id" : "_:genid73"
   } ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#SpaceType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#Spring",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/bimmer/ob#Season" ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#StandardThermalEnvelop",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -1731,20 +1657,28 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#ThermalComfortEnvelop"
-  }, {
-    "@id" : "_:genid137"
-  }, {
-    "@id" : "_:genid142"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid74"
   } ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#Summer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/bimmer/ob#Season" ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#System",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "System refer to the equipment or mechanisms within the building with which occupants may interact with to restore or maintain environmental comfort."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "System"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid143"
+    "@id" : "_:genid78"
+  }, {
+    "@id" : "_:genid79"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#TemperatureParameter",
@@ -1777,7 +1711,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#PhysicalNeed"
   }, {
-    "@id" : "_:genid144"
+    "@id" : "_:genid80"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Thermostat",
@@ -1788,8 +1722,16 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#System"
-  }, {
-    "@id" : "_:genid145"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#TimeOfDay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Time Of Day"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid81"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#VisualNeed",
@@ -1801,11 +1743,15 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#PhysicalNeed"
   }, {
-    "@id" : "_:genid149"
+    "@id" : "_:genid86"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Weibull1DFormula",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent mathematical formulas of the type Weibull 1D."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Weibull 1D Formula"
@@ -1822,9 +1768,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#System"
-  }, {
-    "@id" : "_:genid150"
   } ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#Winter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/bimmer/ob#Season" ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#buildingAddress",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
@@ -1853,43 +1800,22 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#controlType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#System"
-  } ]
+  "@id" : "http://www.semanticweb.org/bimmer/ob#controlValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#dayOfWeek",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "@id" : "http://www.semanticweb.org/bimmer/ob#definedByEnvelop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#DriverTime"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#ThermalNeed"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid1"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#ThermalComfortEnvelop"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#definedByEvent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#EventSpecification"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#DriverEvent"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#definedByParameterRange",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "http://www.semanticweb.org/bimmer/ob#definedByRange",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#ParameterRange"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#definedBySpace",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#SpaceOccupancySpecification"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Space"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#description",
@@ -1898,10 +1824,16 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#detailedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#drivenBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#duration",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#endTime",
@@ -1913,15 +1845,6 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#hasAction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Behavior"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Action"
-  } ]
-}, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#hasBehavior",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1931,40 +1854,22 @@
     "@id" : "http://www.semanticweb.org/bimmer/ob#Behavior"
   } ]
 }, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#hasBuildingType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#hasCoefficient",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#InteractionFormula"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#CoefficientSchema"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#hasDriver",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Behavior"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Driver"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#hasDriverTime",
+  "@id" : "http://www.semanticweb.org/bimmer/ob#hasDayOfWeek",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Driver"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#DriverTime"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#hasEnvironment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Driver"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Environment"
+    "@id" : "http://www.w3.org/2006/time#DayOfWeek"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#hasEnvironmentParameter",
@@ -1980,9 +1885,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#InteractionFormula"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#hasMeeting",
@@ -1994,15 +1896,6 @@
     "@id" : "http://www.semanticweb.org/bimmer/ob#Meeting"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#hasNeed",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Behavior"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Need"
-  } ]
-}, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#hasOccupant",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -2012,10 +1905,13 @@
     "@id" : "http://www.semanticweb.org/bimmer/ob#Occupant"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#hasSchedule",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "http://www.semanticweb.org/bimmer/ob#hasSeason",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#DriverTime"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Schedule"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Season"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#hasSpace",
@@ -2027,6 +1923,9 @@
     "@id" : "http://www.semanticweb.org/bimmer/ob#Space"
   } ]
 }, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#hasSpaceType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#hasSystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -2036,17 +1935,26 @@
     "@id" : "http://www.semanticweb.org/bimmer/ob#System"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#hasThermalComfortEnvelop",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "http://www.semanticweb.org/bimmer/ob#hasTimeOfDay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#ThermalNeed"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#DriverTime"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#ThermalComfortEnvelop"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#TimeOfDay"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#identifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#influencedByEnvironment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Driver"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Environment"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#influencedByHabit",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -2057,23 +1965,17 @@
     "@id" : "http://www.semanticweb.org/bimmer/ob#Habit"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#interactWith",
+  "@id" : "http://www.semanticweb.org/bimmer/ob#influencedByNeed",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Behavior"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#System"
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Need"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#interactionType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Interaction"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
+  "@id" : "http://www.semanticweb.org/bimmer/ob#interactsWith",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#leadsTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#maxNumberOccupants",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
@@ -2097,6 +1999,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#Meeting"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#minNumberOccupants",
@@ -2117,23 +2022,8 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#modeledByFormula",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Interaction"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#InteractionFormula"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#modeledByModel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Movement"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#MovementModel"
-  } ]
+  "@id" : "http://www.semanticweb.org/bimmer/ob#modeledBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#occupantAge",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
@@ -2180,13 +2070,28 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#occursWithinSpace",
+  "@id" : "http://www.semanticweb.org/bimmer/ob#occursAt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Driver"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#DriverTime"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#occursIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#Driver"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#Space"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#operationMode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#System"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#parameterName",
@@ -2216,6 +2121,12 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#programmedAt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Schedule"
+  } ]
+}, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#relatedTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -2225,38 +2136,8 @@
     "@id" : "http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#seasonTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#DriverTime"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid9"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#spaceType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#Space"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid15"
-  } ]
-}, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#specifiedBy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#MovementModel"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#MovementSpecification"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#standardType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#StandardThermalEnvelop"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#startTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
@@ -2267,13 +2148,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#timeOfDay",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob#DriverTime"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/bimmer/ob#triggeredByEvent",
+  "@id" : "http://www.semanticweb.org/bimmer/ob#triggeredBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#Driver"
@@ -2281,4 +2156,46 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#DriverEvent"
   } ]
+}, {
+  "@id" : "http://www.semanticweb.org/bimmer/ob#typicalTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#EventSpecification"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#topDataProperty",
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#DayOfWeek",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Day of The Week"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid87"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#Friday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2006/time#DayOfWeek" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#Monday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2006/time#DayOfWeek" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#Saturday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2006/time#DayOfWeek" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#Sunday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2006/time#DayOfWeek" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#Thursday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2006/time#DayOfWeek" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#Tuesday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2006/time#DayOfWeek" ]
+}, {
+  "@id" : "http://www.w3.org/2006/time#Wednesday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2006/time#DayOfWeek" ]
 } ]

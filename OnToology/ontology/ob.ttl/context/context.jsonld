@@ -7,15 +7,15 @@
     "VisualNeed" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#VisualNeed"
     },
-    "hasEnvironment" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#hasEnvironment",
-      "@type" : "@id"
-    },
     "Space" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#Space"
     },
     "NonStandardThermalEnvelop" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#NonStandardThermalEnvelop"
+    },
+    "influencedByEnvironment" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#influencedByEnvironment",
+      "@type" : "@id"
     },
     "influencedByHabit" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#influencedByHabit",
@@ -24,12 +24,17 @@
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
-    "standardType" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#standardType"
-    },
     "occupantAge" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#occupantAge",
       "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "occursAt" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#occursAt",
+      "@type" : "@id"
+    },
+    "definedByRange" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#definedByRange",
+      "@type" : "@id"
     },
     "hasSpace" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#hasSpace",
@@ -41,6 +46,9 @@
     "hasOccupant" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#hasOccupant",
       "@type" : "@id"
+    },
+    "ControlType" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#ControlType"
     },
     "ThermalComfortEnvelop" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#ThermalComfortEnvelop"
@@ -56,15 +64,14 @@
       "@id" : "http://www.semanticweb.org/bimmer/ob#relatedTo",
       "@type" : "@id"
     },
-    "dayOfWeek" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#dayOfWeek"
-    },
-    "modeledByFormula" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#modeledByFormula",
-      "@type" : "@id"
-    },
     "Shade" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#Shade"
+    },
+    "DayOfWeek" : {
+      "@id" : "http://www.w3.org/2006/time#DayOfWeek"
+    },
+    "TimeOfDay" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#TimeOfDay"
     },
     "Linear1DFormula" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#Linear1DFormula"
@@ -72,9 +79,9 @@
     "Equipment" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#Equipment"
     },
-    "definedByParameterRange" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#definedByParameterRange",
-      "@type" : "@id"
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
     },
     "PhysicalNeed" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#PhysicalNeed"
@@ -82,16 +89,12 @@
     "SolarIrradianceParameter" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#SolarIrradianceParameter"
     },
+    "triggeredBy" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#triggeredBy",
+      "@type" : "@id"
+    },
     "Behavior" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#Behavior"
-    },
-    "interactionType" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#interactionType",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "hasAction" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#hasAction",
-      "@type" : "@id"
     },
     "IlluminanceParameter" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#IlluminanceParameter"
@@ -100,16 +103,8 @@
       "@id" : "http://www.semanticweb.org/bimmer/ob#hasSystem",
       "@type" : "@id"
     },
-    "hasDriver" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#hasDriver",
-      "@type" : "@id"
-    },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
-    },
-    "hasThermalComfortEnvelop" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#hasThermalComfortEnvelop",
-      "@type" : "@id"
     },
     "occupantName" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#occupantName",
@@ -122,23 +117,22 @@
       "@id" : "http://www.semanticweb.org/bimmer/ob#occupantLifestyle",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
-    "definedByEvent" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#definedByEvent",
-      "@type" : "@id"
-    },
     "coefficientName" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#coefficientName",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "occursWithinSpace" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#occursWithinSpace",
-      "@type" : "@id"
     },
     "ConstantValueFormula" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#ConstantValueFormula"
     },
     "Movement" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#Movement"
+    },
+    "occursIn" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#occursIn",
+      "@type" : "@id"
+    },
+    "controlValue" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#controlValue"
     },
     "coefficientValue" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#coefficientValue",
@@ -156,8 +150,9 @@
     "IAQParameter" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#IAQParameter"
     },
-    "spaceType" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#spaceType"
+    "definedByEnvelop" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#definedByEnvelop",
+      "@type" : "@id"
     },
     "AccousticNeed" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#AccousticNeed"
@@ -169,12 +164,9 @@
       "@id" : "http://www.semanticweb.org/bimmer/ob#hasMeeting",
       "@type" : "@id"
     },
-    "hasDriverTime" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#hasDriverTime",
+    "operationMode" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#operationMode",
       "@type" : "@id"
-    },
-    "seasonTime" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#seasonTime"
     },
     "DriverEvent" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#DriverEvent"
@@ -201,12 +193,12 @@
     "creator" : {
       "@id" : "http://purl.org/dc/terms/creator"
     },
+    "influencedByNeed" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#influencedByNeed",
+      "@type" : "@id"
+    },
     "Building" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#Building"
-    },
-    "hasNeed" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#hasNeed",
-      "@type" : "@id"
     },
     "InteractionFormula" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#InteractionFormula"
@@ -218,15 +210,8 @@
     "Need" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#Need"
     },
-    "controlType" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#controlType"
-    },
-    "modeledByModel" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#modeledByModel",
-      "@type" : "@id"
-    },
-    "triggeredByEvent" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#triggeredByEvent",
+    "hasDayOfWeek" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#hasDayOfWeek",
       "@type" : "@id"
     },
     "IAQNeed" : {
@@ -242,10 +227,6 @@
     "identifier" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#identifier"
     },
-    "definedBySpace" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#definedBySpace",
-      "@type" : "@id"
-    },
     "parameterUnit" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#parameterUnit",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
@@ -255,6 +236,10 @@
     },
     "NonPhysicalNeed" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#NonPhysicalNeed"
+    },
+    "modeledBy" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#modeledBy",
+      "@type" : "@id"
     },
     "Window" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#Window"
@@ -266,6 +251,10 @@
       "@id" : "http://www.semanticweb.org/bimmer/ob#minNumberOccupants",
       "@type" : "http://www.w3.org/2001/XMLSchema#integer"
     },
+    "interactsWith" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#interactsWith",
+      "@type" : "@id"
+    },
     "minRangeValue" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#minRangeValue",
       "@type" : "http://www.w3.org/2001/XMLSchema#float"
@@ -275,13 +264,21 @@
     },
     "duration" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#duration",
-      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
     },
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
     },
+    "programmedAt" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#programmedAt",
+      "@type" : "@id"
+    },
+    "leadsTo" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#leadsTo",
+      "@type" : "@id"
+    },
     "publisher" : {
-      "@id" : "http://purl.org/dc/elements/1.1publisher"
+      "@id" : "http://purl.org/dc/elements/1.1/publisher"
     },
     "RelativeHumidityParameter" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#RelativeHumidityParameter"
@@ -306,6 +303,10 @@
     "Driver" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#Driver"
     },
+    "detailedBy" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#detailedBy",
+      "@type" : "@id"
+    },
     "Habit" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#Habit"
     },
@@ -317,10 +318,16 @@
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "meetingProbability" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#meetingProbability"
+      "@id" : "http://www.semanticweb.org/bimmer/ob#meetingProbability",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
     },
-    "timeOfDay" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#timeOfDay"
+    "hasSpaceType" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#hasSpaceType",
+      "@type" : "@id"
+    },
+    "hasTimeOfDay" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#hasTimeOfDay",
+      "@type" : "@id"
     },
     "endTime" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#endTime",
@@ -328,6 +335,9 @@
     },
     "Logit3DLinearFormula" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#Logit3DLinearFormula"
+    },
+    "BuildingType" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#BuildingType"
     },
     "MovementModel" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#MovementModel"
@@ -341,10 +351,6 @@
     },
     "Logit4DLinearFormula" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#Logit4DLinearFormula"
-    },
-    "hasSchedule" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#hasSchedule",
-      "@type" : "@id"
     },
     "Schedule" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#Schedule"
@@ -362,12 +368,15 @@
       "@id" : "http://www.semanticweb.org/bimmer/ob#hasIndependentVariable",
       "@type" : "@id"
     },
-    "interactWith" : {
-      "@id" : "http://www.semanticweb.org/bimmer/ob#interactWith",
+    "drivenBy" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#drivenBy",
       "@type" : "@id"
     },
     "MovementSpecification" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#MovementSpecification"
+    },
+    "SpaceType" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#SpaceType"
     },
     "System" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#System"
@@ -385,6 +394,13 @@
     "Inaction" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#Inaction"
     },
+    "hasBuildingType" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#hasBuildingType",
+      "@type" : "@id"
+    },
+    "Season" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Season"
+    },
     "description" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#description",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
@@ -400,6 +416,10 @@
     "ThermalNeed" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#ThermalNeed"
     },
+    "hasSeason" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#hasSeason",
+      "@type" : "@id"
+    },
     "NoiseParameter" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#NoiseParameter"
     },
@@ -408,6 +428,9 @@
     },
     "EventSpecification" : {
       "@id" : "http://www.semanticweb.org/bimmer/ob#EventSpecification"
+    },
+    "typicalTime" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#typicalTime"
     }
   }
 }
