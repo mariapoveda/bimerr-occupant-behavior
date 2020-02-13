@@ -6,12 +6,11 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @base <http://www.semanticweb.org/bimmer/ob#> .
 
 <http://www.semanticweb.org/bimmer/ob#> rdf:type owl:Ontology ;
-                                         dc:publisher <http://www.oeg-upm.net/> ;
-                                         dc:title "Ontology model for Occupancy Behavior"@en ;
                                          dcterms:creator <http://www.semanticweb.org/bimmer/ob> ;
                                          dcterms:license ""@en ;
                                          rdfs:comment "This ontology aims to model the Occupancy Behavior domain according to the obXML schema (https://behavior.lbl.gov/?q=obXML)"@en ;
@@ -20,14 +19,6 @@
 #################################################################
 #    Annotation properties
 #################################################################
-
-###  http://purl.org/dc/elements/1.1publisher
-dc:publisher rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1title
-dc:title rdf:type owl:AnnotationProperty .
-
 
 ###  http://purl.org/dc/elements/1.1/publisher
 <http://purl.org/dc/elements/1.1/publisher> rdf:type owl:AnnotationProperty .
@@ -53,27 +44,26 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/bimmer/ob#definedByEvent
-:definedByEvent rdf:type owl:ObjectProperty ;
-                rdfs:domain :EventSpecification ;
-                rdfs:range :DriverEvent .
+###  http://www.semanticweb.org/bimmer/ob#definedByEnvelop
+:definedByEnvelop rdf:type owl:ObjectProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain :ThermalNeed ;
+                  rdfs:range :ThermalComfortEnvelop .
 
 
-###  http://www.semanticweb.org/bimmer/ob#definedByParameterRange
-:definedByParameterRange rdf:type owl:ObjectProperty ;
-                         rdfs:range :ParameterRange .
+###  http://www.semanticweb.org/bimmer/ob#definedByRange
+:definedByRange rdf:type owl:ObjectProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:range :ParameterRange .
 
 
-###  http://www.semanticweb.org/bimmer/ob#definedBySpace
-:definedBySpace rdf:type owl:ObjectProperty ;
-                rdfs:domain :SpaceOccupancySpecification ;
-                rdfs:range :Space .
+###  http://www.semanticweb.org/bimmer/ob#detailedBy
+:detailedBy rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty .
 
 
-###  http://www.semanticweb.org/bimmer/ob#hasAction
-:hasAction rdf:type owl:ObjectProperty ;
-           rdfs:domain :Behavior ;
-           rdfs:range :Action .
+###  http://www.semanticweb.org/bimmer/ob#drivenBy
+:drivenBy rdf:type owl:ObjectProperty .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#hasBehavior
@@ -82,30 +72,20 @@ dcterms:modified rdf:type owl:AnnotationProperty .
              rdfs:range :Behavior .
 
 
+###  http://www.semanticweb.org/bimmer/ob#hasBuildingType
+:hasBuildingType rdf:type owl:ObjectProperty .
+
+
 ###  http://www.semanticweb.org/bimmer/ob#hasCoefficient
 :hasCoefficient rdf:type owl:ObjectProperty ;
-                rdfs:domain :InteractionFormula ;
-                rdfs:range :CoefficientSchema .
+                rdfs:domain :InteractionFormula .
 
 
-###  http://www.semanticweb.org/bimmer/ob#hasDriver
-:hasDriver rdf:type owl:ObjectProperty ;
-           rdfs:domain :Behavior ;
-           rdfs:range :Driver .
-
-
-###  http://www.semanticweb.org/bimmer/ob#hasDriverTime
-:hasDriverTime rdf:type owl:ObjectProperty ,
-                        owl:FunctionalProperty ;
-               rdfs:domain :Driver ;
-               rdfs:range :DriverTime .
-
-
-###  http://www.semanticweb.org/bimmer/ob#hasEnvironment
-:hasEnvironment rdf:type owl:ObjectProperty ,
-                         owl:FunctionalProperty ;
-                rdfs:domain :Driver ;
-                rdfs:range :Environment .
+###  http://www.semanticweb.org/bimmer/ob#hasDayOfWeek
+:hasDayOfWeek rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :DriverTime ;
+              rdfs:range time:DayOfWeek .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#hasEnvironmentParameter
@@ -116,8 +96,7 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 
 ###  http://www.semanticweb.org/bimmer/ob#hasIndependentVariable
 :hasIndependentVariable rdf:type owl:ObjectProperty ;
-                        rdfs:domain :InteractionFormula ;
-                        rdfs:range :EnvironmentParameter .
+                        rdfs:domain :InteractionFormula .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#hasMeeting
@@ -126,21 +105,17 @@ dcterms:modified rdf:type owl:AnnotationProperty .
             rdfs:range :Meeting .
 
 
-###  http://www.semanticweb.org/bimmer/ob#hasNeed
-:hasNeed rdf:type owl:ObjectProperty ;
-         rdfs:domain :Behavior ;
-         rdfs:range :Need .
-
-
 ###  http://www.semanticweb.org/bimmer/ob#hasOccupant
 :hasOccupant rdf:type owl:ObjectProperty ;
              rdfs:domain :Space ;
              rdfs:range :Occupant .
 
 
-###  http://www.semanticweb.org/bimmer/ob#hasSchedule
-:hasSchedule rdf:type owl:ObjectProperty ;
-             rdfs:range :Schedule .
+###  http://www.semanticweb.org/bimmer/ob#hasSeason
+:hasSeason rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :DriverTime ;
+           rdfs:range :Season .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#hasSpace
@@ -149,16 +124,27 @@ dcterms:modified rdf:type owl:AnnotationProperty .
           rdfs:range :Space .
 
 
+###  http://www.semanticweb.org/bimmer/ob#hasSpaceType
+:hasSpaceType rdf:type owl:ObjectProperty .
+
+
 ###  http://www.semanticweb.org/bimmer/ob#hasSystem
 :hasSystem rdf:type owl:ObjectProperty ;
            rdfs:domain :Space ;
            rdfs:range :System .
 
 
-###  http://www.semanticweb.org/bimmer/ob#hasThermalComfortEnvelop
-:hasThermalComfortEnvelop rdf:type owl:ObjectProperty ;
-                          rdfs:domain :ThermalNeed ;
-                          rdfs:range :ThermalComfortEnvelop .
+###  http://www.semanticweb.org/bimmer/ob#hasTimeOfDay
+:hasTimeOfDay rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :DriverTime ;
+              rdfs:range :TimeOfDay .
+
+
+###  http://www.semanticweb.org/bimmer/ob#influencedByEnvironment
+:influencedByEnvironment rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Driver ;
+                         rdfs:range :Environment .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#influencedByHabit
@@ -167,30 +153,46 @@ dcterms:modified rdf:type owl:AnnotationProperty .
                    rdfs:range :Habit .
 
 
-###  http://www.semanticweb.org/bimmer/ob#interactWith
-:interactWith rdf:type owl:ObjectProperty ;
-              rdfs:domain :Behavior ;
-              rdfs:range :System .
+###  http://www.semanticweb.org/bimmer/ob#influencedByNeed
+:influencedByNeed rdf:type owl:ObjectProperty ;
+                  rdfs:range :Need .
 
 
-###  http://www.semanticweb.org/bimmer/ob#modeledByFormula
-:modeledByFormula rdf:type owl:ObjectProperty ,
-                           owl:FunctionalProperty ;
-                  rdfs:domain :Interaction ;
-                  rdfs:range :InteractionFormula .
+###  http://www.semanticweb.org/bimmer/ob#interactsWith
+:interactsWith rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/bimmer/ob#modeledByModel
-:modeledByModel rdf:type owl:ObjectProperty ,
-                         owl:FunctionalProperty ;
-                rdfs:domain :Movement ;
-                rdfs:range :MovementModel .
+###  http://www.semanticweb.org/bimmer/ob#leadsTo
+:leadsTo rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/bimmer/ob#occursWithinSpace
-:occursWithinSpace rdf:type owl:ObjectProperty ;
-                   rdfs:domain :Driver ;
-                   rdfs:range :Space .
+###  http://www.semanticweb.org/bimmer/ob#modeledBy
+:modeledBy rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty .
+
+
+###  http://www.semanticweb.org/bimmer/ob#occursAt
+:occursAt rdf:type owl:ObjectProperty ;
+          rdfs:domain :Driver ;
+          rdfs:range :DriverTime .
+
+
+###  http://www.semanticweb.org/bimmer/ob#occursIn
+:occursIn rdf:type owl:ObjectProperty ;
+          rdfs:domain :Driver ;
+          rdfs:range :Space .
+
+
+###  http://www.semanticweb.org/bimmer/ob#operationMode
+:operationMode rdf:type owl:ObjectProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :System .
+
+
+###  http://www.semanticweb.org/bimmer/ob#programmedAt
+:programmedAt rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:range :Schedule .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#relatedTo
@@ -202,15 +204,13 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 
 ###  http://www.semanticweb.org/bimmer/ob#specifiedBy
 :specifiedBy rdf:type owl:ObjectProperty ,
-                      owl:FunctionalProperty ;
-             rdfs:domain :MovementModel ;
-             rdfs:range :MovementSpecification .
+                      owl:FunctionalProperty .
 
 
-###  http://www.semanticweb.org/bimmer/ob#triggeredByEvent
-:triggeredByEvent rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Driver ;
-                  rdfs:range :DriverEvent .
+###  http://www.semanticweb.org/bimmer/ob#triggeredBy
+:triggeredBy rdf:type owl:ObjectProperty ;
+             rdfs:domain :Driver ;
+             rdfs:range :DriverEvent .
 
 
 #################################################################
@@ -237,40 +237,8 @@ dcterms:modified rdf:type owl:AnnotationProperty .
                   rdfs:range xsd:float .
 
 
-###  http://www.semanticweb.org/bimmer/ob#controlType
-:controlType rdf:type owl:DatatypeProperty ,
-                      owl:FunctionalProperty ;
-             rdfs:domain :System .
-
-
-###  http://www.semanticweb.org/bimmer/ob#dayOfWeek
-:dayOfWeek rdf:type owl:DatatypeProperty ,
-                    owl:FunctionalProperty ;
-           rdfs:domain :DriverTime ;
-           rdfs:range [ rdf:type rdfs:Datatype ;
-                        owl:oneOf [ rdf:type rdf:List ;
-                                    rdf:first "Friday" ;
-                                    rdf:rest [ rdf:type rdf:List ;
-                                               rdf:first "Monday" ;
-                                               rdf:rest [ rdf:type rdf:List ;
-                                                          rdf:first "Saturday" ;
-                                                          rdf:rest [ rdf:type rdf:List ;
-                                                                     rdf:first "Sunday" ;
-                                                                     rdf:rest [ rdf:type rdf:List ;
-                                                                                rdf:first "Thursday" ;
-                                                                                rdf:rest [ rdf:type rdf:List ;
-                                                                                           rdf:first "Tuesday" ;
-                                                                                           rdf:rest [ rdf:type rdf:List ;
-                                                                                                      rdf:first "Wednesday" ;
-                                                                                                      rdf:rest rdf:nil
-                                                                                                    ]
-                                                                                         ]
-                                                                              ]
-                                                                   ]
-                                                        ]
-                                             ]
-                                  ]
-                      ] .
+###  http://www.semanticweb.org/bimmer/ob#controlValue
+:controlValue rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#description
@@ -281,7 +249,7 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/bimmer/ob#duration
 :duration rdf:type owl:DatatypeProperty ,
                    owl:FunctionalProperty ;
-          rdfs:range xsd:dateTime .
+          rdfs:range xsd:integer .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#endTime
@@ -294,12 +262,6 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/bimmer/ob#identifier
 :identifier rdf:type owl:DatatypeProperty ,
                      owl:FunctionalProperty .
-
-
-###  http://www.semanticweb.org/bimmer/ob#interactionType
-:interactionType rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Interaction ;
-                 rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#maxNumberOccupants
@@ -319,7 +281,8 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/bimmer/ob#meetingProbability
 :meetingProbability rdf:type owl:DatatypeProperty ,
                              owl:FunctionalProperty ;
-                    rdfs:domain :Meeting .
+                    rdfs:domain :Meeting ;
+                    rdfs:range xsd:float .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#minNumberOccupants
@@ -389,72 +352,6 @@ dcterms:modified rdf:type owl:AnnotationProperty .
                      rdfs:range xsd:float .
 
 
-###  http://www.semanticweb.org/bimmer/ob#seasonTime
-:seasonTime rdf:type owl:DatatypeProperty ,
-                     owl:FunctionalProperty ;
-            rdfs:domain :DriverTime ;
-            rdfs:range [ rdf:type rdfs:Datatype ;
-                         owl:oneOf [ rdf:type rdf:List ;
-                                     rdf:first "All" ;
-                                     rdf:rest [ rdf:type rdf:List ;
-                                                rdf:first "Fall" ;
-                                                rdf:rest [ rdf:type rdf:List ;
-                                                           rdf:first "Spring" ;
-                                                           rdf:rest [ rdf:type rdf:List ;
-                                                                      rdf:first "Summer" ;
-                                                                      rdf:rest [ rdf:type rdf:List ;
-                                                                                 rdf:first "Winter" ;
-                                                                                 rdf:rest rdf:nil
-                                                                               ]
-                                                                    ]
-                                                         ]
-                                              ]
-                                   ]
-                       ] .
-
-
-###  http://www.semanticweb.org/bimmer/ob#spaceType
-:spaceType rdf:type owl:DatatypeProperty ,
-                    owl:FunctionalProperty ;
-           rdfs:domain :Space ;
-           rdfs:range [ rdf:type rdfs:Datatype ;
-                        owl:oneOf [ rdf:type rdf:List ;
-                                    rdf:first "Corridor" ;
-                                    rdf:rest [ rdf:type rdf:List ;
-                                               rdf:first "MeetingRoom" ;
-                                               rdf:rest [ rdf:type rdf:List ;
-                                                          rdf:first "Office" ;
-                                                          rdf:rest [ rdf:type rdf:List ;
-                                                                     rdf:first "OfficePrivate" ;
-                                                                     rdf:rest [ rdf:type rdf:List ;
-                                                                                rdf:first "OfficeShared" ;
-                                                                                rdf:rest [ rdf:type rdf:List ;
-                                                                                           rdf:first "Other" ;
-                                                                                           rdf:rest [ rdf:type rdf:List ;
-                                                                                                      rdf:first "Outdoor" ;
-                                                                                                      rdf:rest [ rdf:type rdf:List ;
-                                                                                                                 rdf:first "ResidentialOwn" ;
-                                                                                                                 rdf:rest [ rdf:type rdf:List ;
-                                                                                                                            rdf:first "ResidentialRent" ;
-                                                                                                                            rdf:rest rdf:nil
-                                                                                                                          ]
-                                                                                                               ]
-                                                                                                    ]
-                                                                                         ]
-                                                                              ]
-                                                                   ]
-                                                        ]
-                                             ]
-                                  ]
-                      ] .
-
-
-###  http://www.semanticweb.org/bimmer/ob#standardType
-:standardType rdf:type owl:DatatypeProperty ,
-                       owl:FunctionalProperty ;
-              rdfs:domain :StandardThermalEnvelop .
-
-
 ###  http://www.semanticweb.org/bimmer/ob#startTime
 :startTime rdf:type owl:DatatypeProperty ,
                     owl:FunctionalProperty ;
@@ -462,10 +359,14 @@ dcterms:modified rdf:type owl:AnnotationProperty .
            rdfs:range xsd:dateTime .
 
 
-###  http://www.semanticweb.org/bimmer/ob#timeOfDay
-:timeOfDay rdf:type owl:DatatypeProperty ,
-                    owl:FunctionalProperty ;
-           rdfs:domain :DriverTime .
+###  http://www.semanticweb.org/bimmer/ob#typicalTime
+:typicalTime rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :EventSpecification .
+
+
+###  http://www.w3.org/2002/07/owl#topDataProperty
+owl:topDataProperty rdfs:range xsd:float .
 
 
 #################################################################
@@ -476,7 +377,7 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 :AccousticNeed rdf:type owl:Class ;
                rdfs:subClassOf :PhysicalNeed ,
                                [ rdf:type owl:Restriction ;
-                                 owl:onProperty :definedByParameterRange ;
+                                 owl:onProperty :definedByRange ;
                                  owl:someValuesFrom :ParameterRange
                                ] ;
                rdfs:label "Accoustic Need"@en .
@@ -484,27 +385,31 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 
 ###  http://www.semanticweb.org/bimmer/ob#Action
 :Action rdf:type owl:Class ;
-        rdfs:comment "The action the occupant performs to satisfy its need."@en ;
+        rdfs:comment "Actions are the interactions with systems or activities that occupants can perform to achieve environmental comfort."@en ;
         rdfs:label "Action"@en .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#Behavior
 :Behavior rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasAction ;
+                            owl:onProperty :leadsTo ;
                             owl:someValuesFrom :Action
                           ] ,
                           [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasDriver ;
+                            owl:onProperty :drivenBy ;
                             owl:allValuesFrom :Driver
                           ] ,
                           [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasNeed ;
+                            owl:onProperty :influencedByNeed ;
                             owl:allValuesFrom :Need
                           ] ,
                           [ rdf:type owl:Restriction ;
-                            owl:onProperty :interactWith ;
+                            owl:onProperty :interactsWith ;
                             owl:allValuesFrom :System
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :identifier ;
+                            owl:someValuesFrom xsd:string
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :description ;
@@ -517,6 +422,10 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/bimmer/ob#Building
 :Building rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasBuildingType ;
+                            owl:someValuesFrom :BuildingType
+                          ] ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty :hasSpace ;
                             owl:someValuesFrom :Space
                           ] ,
@@ -526,7 +435,7 @@ dcterms:modified rdf:type owl:AnnotationProperty .
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :identifier ;
-                            owl:someValuesFrom rdfs:Literal
+                            owl:someValuesFrom xsd:string
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :buildingAddress ;
@@ -538,6 +447,10 @@ dcterms:modified rdf:type owl:AnnotationProperty .
                           ] ;
           rdfs:comment "Building where the occupancy behaviors occur."@en ;
           rdfs:label "Building"@en .
+
+
+###  http://www.semanticweb.org/bimmer/ob#BuildingType
+:BuildingType rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#CoefficientSchema
@@ -557,7 +470,12 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/bimmer/ob#ConstantValueFormula
 :ConstantValueFormula rdf:type owl:Class ;
                       rdfs:subClassOf :InteractionFormula ;
+                      rdfs:comment "Class to represent mathematical formulas of the type Constant Value."@en ;
                       rdfs:label "Constant Value Formula"@en .
+
+
+###  http://www.semanticweb.org/bimmer/ob#ControlType
+:ControlType rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#DaylightFactorParameter
@@ -570,26 +488,22 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/bimmer/ob#Driver
 :Driver rdf:type owl:Class ;
         rdfs:subClassOf [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasDriverTime ;
-                          owl:allValuesFrom :DriverTime
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasEnvironment ;
+                          owl:onProperty :influencedByEnvironment ;
                           owl:allValuesFrom :Environment
                         ] ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty :influencedByHabit ;
-                          owl:allValuesFrom :Habit
+                          owl:onProperty :occursAt ;
+                          owl:allValuesFrom :DriverTime
                         ] ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty :occursWithinSpace ;
+                          owl:onProperty :occursIn ;
                           owl:allValuesFrom :Space
                         ] ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty :triggeredByEvent ;
+                          owl:onProperty :triggeredBy ;
                           owl:allValuesFrom :DriverEvent
                         ] ;
-        rdfs:comment "Circumstances that motivate the occupant behavior."@en ;
+        rdfs:comment "Drivers represent the environmental factors that stimulate occupants to fulfill a physical, physiological or psychological need."@en ;
         rdfs:label "Driver"@en .
 
 
@@ -601,70 +515,16 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/bimmer/ob#DriverTime
 :DriverTime rdf:type owl:Class ;
             rdfs:subClassOf [ rdf:type owl:Restriction ;
-                              owl:onProperty :dayOfWeek ;
-                              owl:allValuesFrom [ rdf:type rdfs:Datatype ;
-                                                  owl:oneOf [ rdf:type rdf:List ;
-                                                              rdf:first "Friday" ;
-                                                              rdf:rest [ rdf:type rdf:List ;
-                                                                         rdf:first "Monday" ;
-                                                                         rdf:rest [ rdf:type rdf:List ;
-                                                                                    rdf:first "Saturday" ;
-                                                                                    rdf:rest [ rdf:type rdf:List ;
-                                                                                               rdf:first "Sunday" ;
-                                                                                               rdf:rest [ rdf:type rdf:List ;
-                                                                                                          rdf:first "Thursday" ;
-                                                                                                          rdf:rest [ rdf:type rdf:List ;
-                                                                                                                     rdf:first "Tuesday" ;
-                                                                                                                     rdf:rest [ rdf:type rdf:List ;
-                                                                                                                                rdf:first "Wednesday" ;
-                                                                                                                                rdf:rest rdf:nil
-                                                                                                                              ]
-                                                                                                                   ]
-                                                                                                        ]
-                                                                                             ]
-                                                                                  ]
-                                                                       ]
-                                                            ]
-                                                ]
+                              owl:onProperty :hasDayOfWeek ;
+                              owl:allValuesFrom time:DayOfWeek
                             ] ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty :seasonTime ;
-                              owl:allValuesFrom [ rdf:type rdfs:Datatype ;
-                                                  owl:oneOf [ rdf:type rdf:List ;
-                                                              rdf:first "All" ;
-                                                              rdf:rest [ rdf:type rdf:List ;
-                                                                         rdf:first "Fall" ;
-                                                                         rdf:rest [ rdf:type rdf:List ;
-                                                                                    rdf:first "Spring" ;
-                                                                                    rdf:rest [ rdf:type rdf:List ;
-                                                                                               rdf:first "Summer" ;
-                                                                                               rdf:rest [ rdf:type rdf:List ;
-                                                                                                          rdf:first "Winter" ;
-                                                                                                          rdf:rest rdf:nil
-                                                                                                        ]
-                                                                                             ]
-                                                                                  ]
-                                                                       ]
-                                                            ]
-                                                ]
+                              owl:onProperty :hasSeason ;
+                              owl:allValuesFrom :Season
                             ] ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty :timeOfDay ;
-                              owl:allValuesFrom [ rdf:type rdfs:Datatype ;
-                                                  owl:oneOf [ rdf:type rdf:List ;
-                                                              rdf:first "evening" ;
-                                                              rdf:rest [ rdf:type rdf:List ;
-                                                                         rdf:first "midnight" ;
-                                                                         rdf:rest [ rdf:type rdf:List ;
-                                                                                    rdf:first "morning" ;
-                                                                                    rdf:rest [ rdf:type rdf:List ;
-                                                                                               rdf:first "noon" ;
-                                                                                               rdf:rest rdf:nil
-                                                                                             ]
-                                                                                  ]
-                                                                       ]
-                                                            ]
-                                                ]
+                              owl:onProperty :hasTimeOfDay ;
+                              owl:allValuesFrom :TimeOfDay
                             ] ;
             rdfs:comment "N-ary class to define the time, day and season when a specific driver occurs."@en ;
             rdfs:label "Driver Time"@en .
@@ -688,7 +548,7 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 :EnvironmentParameter rdf:type owl:Class ;
                       rdfs:subClassOf [ rdf:type owl:Restriction ;
                                         owl:onProperty :identifier ;
-                                        owl:someValuesFrom rdfs:Literal
+                                        owl:someValuesFrom xsd:string
                                       ] ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :parameterUnit ;
@@ -708,11 +568,7 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 
 ###  http://www.semanticweb.org/bimmer/ob#Equipment
 :Equipment rdf:type owl:Class ;
-           rdfs:subClassOf :System ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :controlType ;
-                             owl:allValuesFrom xsd:string
-                           ] ;
+           rdfs:subClassOf :System ;
            rdfs:comment "Class to represent equipments the occupant interact with but do not influence the environment. These systems also contribute in the energy performance analysis." ;
            rdfs:label "Equipment"@en .
 
@@ -721,13 +577,18 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 :EventSpecification rdf:type owl:Class ;
                     rdfs:subClassOf :MovementSpecification ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty :definedByEvent ;
+                                      owl:onProperty :detailedBy ;
                                       owl:someValuesFrom :DriverEvent
                                     ] ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty :hasSchedule ;
+                                      owl:onProperty :programmedAt ;
                                       owl:someValuesFrom :Schedule
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :typicalTime ;
+                                      owl:someValuesFrom xsd:dateTime
                                     ] ;
+                    owl:disjointWith :SpaceOccupancySpecification ;
                     rdfs:label "Event Specification"@en .
 
 
@@ -740,22 +601,7 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 
 ###  http://www.semanticweb.org/bimmer/ob#HVAC
 :HVAC rdf:type owl:Class ;
-      rdfs:subClassOf :System ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :controlType ;
-                        owl:allValuesFrom [ rdf:type rdfs:Datatype ;
-                                            owl:oneOf [ rdf:type rdf:List ;
-                                                        rdf:first "controllable" ;
-                                                        rdf:rest [ rdf:type rdf:List ;
-                                                                   rdf:first "zonal cotrollable" ;
-                                                                   rdf:rest [ rdf:type rdf:List ;
-                                                                              rdf:first "zonal fixed" ;
-                                                                              rdf:rest rdf:nil
-                                                                            ]
-                                                                 ]
-                                                      ]
-                                          ]
-                      ] ;
+      rdfs:subClassOf :System ;
       rdfs:label "HVAC"@en .
 
 
@@ -769,7 +615,7 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 :IAQNeed rdf:type owl:Class ;
          rdfs:subClassOf :PhysicalNeed ,
                          [ rdf:type owl:Restriction ;
-                           owl:onProperty :definedByParameterRange ;
+                           owl:onProperty :definedByRange ;
                            owl:someValuesFrom :ParameterRange
                          ] ;
          rdfs:label "IAQ Need"@en .
@@ -792,7 +638,7 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/bimmer/ob#Inaction
 :Inaction rdf:type owl:Class ;
           rdfs:subClassOf :Action ;
-          rdfs:comment "The Inaction class represents the decision of an occupant to not act and remain uncomfortable within a space"@en ;
+          rdfs:comment "The Inaction class represents the decision of an occupant to not act and remain uncomfortable within a space."@en ;
           rdfs:label "Inaction"@en .
 
 
@@ -800,16 +646,12 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 :Interaction rdf:type owl:Class ;
              rdfs:subClassOf :Action ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :modeledByFormula ;
+                               owl:onProperty :modeledBy ;
                                owl:someValuesFrom :InteractionFormula
                              ] ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :description ;
-                               owl:allValuesFrom xsd:string
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :interactionType ;
-                               owl:allValuesFrom xsd:string
+                               owl:onProperty :controlValue ;
+                               owl:someValuesFrom xsd:float
                              ] ;
              rdfs:comment "The Interaction class represents the interaction of the occupant with the systems within the space to recover its comfort."@en ;
              rdfs:label "Interaction"@en .
@@ -829,78 +671,67 @@ dcterms:modified rdf:type owl:AnnotationProperty .
                                       owl:onProperty :description ;
                                       owl:someValuesFrom xsd:string
                                     ] ;
+                    rdfs:comment "Formula to model the probability of interaction between ocupant and system."@en ;
                     rdfs:label "Interaction Formula"@en .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#Light
 :Light rdf:type owl:Class ;
-       rdfs:subClassOf :System ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :controlType ;
-                         owl:allValuesFrom [ rdf:type rdfs:Datatype ;
-                                             owl:oneOf [ rdf:type rdf:List ;
-                                                         rdf:first "dimmable" ;
-                                                         rdf:rest [ rdf:type rdf:List ;
-                                                                    rdf:first "on/off" ;
-                                                                    rdf:rest [ rdf:type rdf:List ;
-                                                                               rdf:first "three steps" ;
-                                                                               rdf:rest [ rdf:type rdf:List ;
-                                                                                          rdf:first "two steps" ;
-                                                                                          rdf:rest rdf:nil
-                                                                                        ]
-                                                                             ]
-                                                                  ]
-                                                       ]
-                                           ]
-                       ] ;
+       rdfs:subClassOf :System ;
        rdfs:label "Light"@en .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#Linear1DFormula
 :Linear1DFormula rdf:type owl:Class ;
                  rdfs:subClassOf :InteractionFormula ;
+                 rdfs:comment "Class to represent mathematical formulas of the type Linear 1D."@en ;
                  rdfs:label "Linear 1D Formula"@en .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#Linear2DFormula
 :Linear2DFormula rdf:type owl:Class ;
                  rdfs:subClassOf :InteractionFormula ;
+                 rdfs:comment "Class to represent mathematical formulas of the type Linear 2D."@en ;
                  rdfs:label "Linear 2D Formula"@en .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#Linear3DFormula
 :Linear3DFormula rdf:type owl:Class ;
                  rdfs:subClassOf :InteractionFormula ;
+                 rdfs:comment "Class to represent mathematical formulas of the type Linear 3D."@en ;
                  rdfs:label "Linear 3D Formula"@en .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#Logit2DLinearFormula
 :Logit2DLinearFormula rdf:type owl:Class ;
                       rdfs:subClassOf :InteractionFormula ;
+                      rdfs:comment "Class to represent mathematical formulas of the type Logit 2D Linear."@en ;
                       rdfs:label "Logit 2D Linear Formula"@en .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#Logit3DLinearFormula
 :Logit3DLinearFormula rdf:type owl:Class ;
                       rdfs:subClassOf :InteractionFormula ;
+                      rdfs:comment "Class to represent mathematical formulas of the type Logit 3D Linear."@en ;
                       rdfs:label "Logit 3D Linear Formula"@en .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#Logit4DLinearFormula
 :Logit4DLinearFormula rdf:type owl:Class ;
                       rdfs:subClassOf :InteractionFormula ;
+                      rdfs:comment "Class to represent mathematical formulas of the type Logit 4D Linear."@en ;
                       rdfs:label "Logit 4D Linear Formula"@en .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#Meeting
 :Meeting rdf:type owl:Class ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasSchedule ;
+                           owl:onProperty :programmedAt ;
                            owl:someValuesFrom :Schedule
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :meetingProbability ;
-                           owl:someValuesFrom rdfs:Literal
+                           owl:someValuesFrom xsd:float
                          ] ;
          rdfs:comment "Class to represent a meeting inside a communal space."@en ;
          rdfs:label "Meeting"@en .
@@ -910,7 +741,7 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 :Movement rdf:type owl:Class ;
           rdfs:subClassOf :Action ,
                           [ rdf:type owl:Restriction ;
-                            owl:onProperty :modeledByModel ;
+                            owl:onProperty :modeledBy ;
                             owl:someValuesFrom :MovementModel
                           ] ;
           rdfs:comment "The Movement class is used to represent the occupants movements inside a space."@en ;
@@ -923,16 +754,19 @@ dcterms:modified rdf:type owl:AnnotationProperty .
                                  owl:onProperty :specifiedBy ;
                                  owl:someValuesFrom :MovementSpecification
                                ] ;
+               rdfs:comment "Model to define ocuppants movements inside a space"@en ;
                rdfs:label "Movement Model"@en .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#MovementSpecification
 :MovementSpecification rdf:type owl:Class ;
+                       rdfs:comment "Class to represent the data needed to model movements inside a space."@en ;
                        rdfs:label "Movement Specification"@en .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#Need
 :Need rdf:type owl:Class ;
+      rdfs:comment "Needs represent the physical and non-physical requirements of the occupant that must be met in order to ensure satisfaction with their environment."@en ;
       rdfs:label "Need"@en .
 
 
@@ -947,6 +781,7 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 :NonPhysicalNeed rdf:type owl:Class ;
                  rdfs:subClassOf :Need ;
                  owl:disjointWith :PhysicalNeed ;
+                 rdfs:comment "Non physical comfort need that could lead to a behavior, such as privacy, schedule, etc."@en ;
                  rdfs:label "Non Physical Need"@en .
 
 
@@ -954,7 +789,7 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 :NonStandardThermalEnvelop rdf:type owl:Class ;
                            rdfs:subClassOf :ThermalComfortEnvelop ,
                                            [ rdf:type owl:Restriction ;
-                                             owl:onProperty :definedByParameterRange ;
+                                             owl:onProperty :definedByRange ;
                                              owl:someValuesFrom :ParameterRange
                                            ] ;
                            owl:disjointWith :StandardThermalEnvelop ;
@@ -968,8 +803,12 @@ dcterms:modified rdf:type owl:AnnotationProperty .
                             owl:someValuesFrom :Behavior
                           ] ,
                           [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasBehavior ;
+                            owl:allValuesFrom :Behavior
+                          ] ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty :identifier ;
-                            owl:someValuesFrom rdfs:Literal
+                            owl:someValuesFrom xsd:string
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :occupantAge ;
@@ -1002,10 +841,6 @@ dcterms:modified rdf:type owl:AnnotationProperty .
                                   owl:someValuesFrom :EnvironmentParameter
                                 ] ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty :relatedTo ;
-                                  owl:allValuesFrom :EnvironmentParameter
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty :maxRangeValue ;
                                   owl:someValuesFrom xsd:float
                                 ] ,
@@ -1013,19 +848,21 @@ dcterms:modified rdf:type owl:AnnotationProperty .
                                   owl:onProperty :minRangeValue ;
                                   owl:someValuesFrom xsd:float
                                 ] ;
-                rdfs:comment "N-ary class to represent the minimum and maximm comfort values for an occupant."@en ;
+                rdfs:comment "N-ary class to represent the minimum and maximm comfort values with respect to an environmental parameter."@en ;
                 rdfs:label "Parameter Range"@en .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#PhysicalNeed
 :PhysicalNeed rdf:type owl:Class ;
               rdfs:subClassOf :Need ;
+              rdfs:comment "Physical comfort need that could lead to a behavior."@en ;
               rdfs:label "Physical Need"@en .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#Quadratic1DFormula
 :Quadratic1DFormula rdf:type owl:Class ;
                     rdfs:subClassOf :InteractionFormula ;
+                    rdfs:comment "Class to represent mathematical formulas of the type Quadratic 1D Linear."@en ;
                     rdfs:label "Quadratic 1D Formula"@en .
 
 
@@ -1054,7 +891,7 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 :Schedule rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty :duration ;
-                            owl:someValuesFrom xsd:dateTime
+                            owl:someValuesFrom xsd:integer
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :endTime ;
@@ -1064,24 +901,26 @@ dcterms:modified rdf:type owl:AnnotationProperty .
                             owl:onProperty :startTime ;
                             owl:someValuesFrom xsd:dateTime
                           ] ;
+          rdfs:comment "N-ary class to represent the duration, start time and end time of an event."@en ;
           rdfs:label "Schedule"@en .
+
+
+###  http://www.semanticweb.org/bimmer/ob#Season
+:Season rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Class ;
+                              owl:oneOf ( :All
+                                          :Fall
+                                          :Spring
+                                          :Summer
+                                          :Winter
+                                        )
+                            ] ;
+        rdfs:label "Season"@en .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#Shade
 :Shade rdf:type owl:Class ;
-       rdfs:subClassOf :System ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :controlType ;
-                         owl:allValuesFrom [ rdf:type rdfs:Datatype ;
-                                             owl:oneOf [ rdf:type rdf:List ;
-                                                         rdf:first "adjustable" ;
-                                                         rdf:rest [ rdf:type rdf:List ;
-                                                                    rdf:first "fixed" ;
-                                                                    rdf:rest rdf:nil
-                                                                  ]
-                                                       ]
-                                           ]
-                       ] ;
+       rdfs:subClassOf :System ;
        rdfs:label "Shade"@en .
 
 
@@ -1095,6 +934,10 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/bimmer/ob#Space
 :Space rdf:type owl:Class ;
        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasSpaceType ;
+                         owl:someValuesFrom :SpaceType
+                       ] ,
+                       [ rdf:type owl:Restriction ;
                          owl:onProperty :hasMeeting ;
                          owl:allValuesFrom :Meeting
                        ] ,
@@ -1108,40 +951,7 @@ dcterms:modified rdf:type owl:AnnotationProperty .
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :identifier ;
-                         owl:someValuesFrom rdfs:Literal
-                       ] ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :spaceType ;
-                         owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                              owl:oneOf [ rdf:type rdf:List ;
-                                                          rdf:first "Corridor" ;
-                                                          rdf:rest [ rdf:type rdf:List ;
-                                                                     rdf:first "MeetingRoom" ;
-                                                                     rdf:rest [ rdf:type rdf:List ;
-                                                                                rdf:first "Office" ;
-                                                                                rdf:rest [ rdf:type rdf:List ;
-                                                                                           rdf:first "OfficePrivate" ;
-                                                                                           rdf:rest [ rdf:type rdf:List ;
-                                                                                                      rdf:first "OfficeShared" ;
-                                                                                                      rdf:rest [ rdf:type rdf:List ;
-                                                                                                                 rdf:first "Other" ;
-                                                                                                                 rdf:rest [ rdf:type rdf:List ;
-                                                                                                                            rdf:first "Outdoor" ;
-                                                                                                                            rdf:rest [ rdf:type rdf:List ;
-                                                                                                                                       rdf:first "ResidentialOwn" ;
-                                                                                                                                       rdf:rest [ rdf:type rdf:List ;
-                                                                                                                                                  rdf:first "ResidentialRent" ;
-                                                                                                                                                  rdf:rest rdf:nil
-                                                                                                                                                ]
-                                                                                                                                     ]
-                                                                                                                          ]
-                                                                                                               ]
-                                                                                                    ]
-                                                                                         ]
-                                                                              ]
-                                                                   ]
-                                                        ]
-                                            ]
+                         owl:someValuesFrom xsd:string
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :description ;
@@ -1154,39 +964,6 @@ dcterms:modified rdf:type owl:AnnotationProperty .
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :minNumberOccupants ;
                          owl:allValuesFrom xsd:integer
-                       ] ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :spaceType ;
-                         owl:allValuesFrom [ rdf:type rdfs:Datatype ;
-                                             owl:oneOf [ rdf:type rdf:List ;
-                                                         rdf:first "Corridor" ;
-                                                         rdf:rest [ rdf:type rdf:List ;
-                                                                    rdf:first "MeetingRoom" ;
-                                                                    rdf:rest [ rdf:type rdf:List ;
-                                                                               rdf:first "Office" ;
-                                                                               rdf:rest [ rdf:type rdf:List ;
-                                                                                          rdf:first "OfficePrivate" ;
-                                                                                          rdf:rest [ rdf:type rdf:List ;
-                                                                                                     rdf:first "OfficeShared" ;
-                                                                                                     rdf:rest [ rdf:type rdf:List ;
-                                                                                                                rdf:first "Other" ;
-                                                                                                                rdf:rest [ rdf:type rdf:List ;
-                                                                                                                           rdf:first "Outdoor" ;
-                                                                                                                           rdf:rest [ rdf:type rdf:List ;
-                                                                                                                                      rdf:first "ResidentialOwn" ;
-                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
-                                                                                                                                                 rdf:first "ResidentialRent" ;
-                                                                                                                                                 rdf:rest rdf:nil
-                                                                                                                                               ]
-                                                                                                                                    ]
-                                                                                                                         ]
-                                                                                                              ]
-                                                                                                   ]
-                                                                                        ]
-                                                                             ]
-                                                                  ]
-                                                       ]
-                                           ]
                        ] ;
        rdfs:comment "Class to represent the different spaces the building have and where the occupant behaviors occur." ;
        rdfs:label "Space"@en .
@@ -1196,7 +973,7 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 :SpaceOccupancySpecification rdf:type owl:Class ;
                              rdfs:subClassOf :MovementSpecification ,
                                              [ rdf:type owl:Restriction ;
-                                               owl:onProperty :definedBySpace ;
+                                               owl:onProperty :detailedBy ;
                                                owl:someValuesFrom :Space
                                              ] ,
                                              [ rdf:type owl:Restriction ;
@@ -1210,48 +987,33 @@ dcterms:modified rdf:type owl:AnnotationProperty .
                              rdfs:label "Space Occupancy Specification"@en .
 
 
+###  http://www.semanticweb.org/bimmer/ob#SpaceType
+:SpaceType rdf:type owl:Class .
+
+
 ###  http://www.semanticweb.org/bimmer/ob#StandardThermalEnvelop
 :StandardThermalEnvelop rdf:type owl:Class ;
-                        rdfs:subClassOf :ThermalComfortEnvelop ,
-                                        [ rdf:type owl:Restriction ;
-                                          owl:onProperty :standardType ;
-                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                               owl:oneOf [ rdf:type rdf:List ;
-                                                                           rdf:first "ASHRAE Adaptive Comfort" ;
-                                                                           rdf:rest [ rdf:type rdf:List ;
-                                                                                      rdf:first "ASHRAE Comfort Envelop" ;
-                                                                                      rdf:rest [ rdf:type rdf:List ;
-                                                                                                 rdf:first "ISO Adaptive Comfort" ;
-                                                                                                 rdf:rest rdf:nil
-                                                                                               ]
-                                                                                    ]
-                                                                         ]
-                                                             ]
-                                        ] ,
-                                        [ rdf:type owl:Restriction ;
-                                          owl:onProperty :standardType ;
-                                          owl:allValuesFrom [ rdf:type rdfs:Datatype ;
-                                                              owl:oneOf [ rdf:type rdf:List ;
-                                                                          rdf:first "ASHRAE Adaptive Comfort" ;
-                                                                          rdf:rest [ rdf:type rdf:List ;
-                                                                                     rdf:first "ASHRAE Comfort Envelop" ;
-                                                                                     rdf:rest [ rdf:type rdf:List ;
-                                                                                                rdf:first "ISO Adaptive Comfort" ;
-                                                                                                rdf:rest rdf:nil
-                                                                                              ]
-                                                                                   ]
-                                                                        ]
-                                                            ]
-                                        ] ;
+                        owl:equivalentClass [ rdf:type owl:Class ;
+                                              owl:oneOf ( :ASHRAEAdaptiveComfort
+                                                          :ASHRAEComfortEnvelop
+                                                          :ISOAdaptiveComfort
+                                                        )
+                                            ] ;
+                        rdfs:subClassOf :ThermalComfortEnvelop ;
                         rdfs:label "Standard Comfort Envelop"@en .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#System
 :System rdf:type owl:Class ;
         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :operationMode ;
+                          owl:allValuesFrom :ControlType
+                        ] ,
+                        [ rdf:type owl:Restriction ;
                           owl:onProperty :identifier ;
                           owl:someValuesFrom rdfs:Literal
                         ] ;
+        rdfs:comment "System refer to the equipment or mechanisms within the building with which occupants may interact with to restore or maintain environmental comfort."@en ;
         rdfs:label "System"@en .
 
 
@@ -1271,7 +1033,7 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 :ThermalNeed rdf:type owl:Class ;
              rdfs:subClassOf :PhysicalNeed ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :hasThermalComfortEnvelop ;
+                               owl:onProperty :definedByEnvelop ;
                                owl:someValuesFrom :ThermalComfortEnvelop
                              ] ;
              rdfs:label "Thermal Need"@en .
@@ -1279,27 +1041,27 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 
 ###  http://www.semanticweb.org/bimmer/ob#Thermostat
 :Thermostat rdf:type owl:Class ;
-            rdfs:subClassOf :System ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty :controlType ;
-                              owl:allValuesFrom [ rdf:type rdfs:Datatype ;
-                                                  owl:oneOf [ rdf:type rdf:List ;
-                                                              rdf:first "adjustable" ;
-                                                              rdf:rest [ rdf:type rdf:List ;
-                                                                         rdf:first "fixed" ;
-                                                                         rdf:rest rdf:nil
-                                                                       ]
-                                                            ]
-                                                ]
-                            ] ;
+            rdfs:subClassOf :System ;
             rdfs:label "Thermostat"@en .
+
+
+###  http://www.semanticweb.org/bimmer/ob#TimeOfDay
+:TimeOfDay rdf:type owl:Class ;
+           owl:equivalentClass [ rdf:type owl:Class ;
+                                 owl:oneOf ( :Evening
+                                             :Midnight
+                                             :Morning
+                                             :Noon
+                                           )
+                               ] ;
+           rdfs:label "Time Of Day"@en .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#VisualNeed
 :VisualNeed rdf:type owl:Class ;
             rdfs:subClassOf :PhysicalNeed ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty :definedByParameterRange ;
+                              owl:onProperty :definedByRange ;
                               owl:someValuesFrom :ParameterRange
                             ] ;
             rdfs:label "Visual Need"@en .
@@ -1308,30 +1070,156 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/bimmer/ob#Weibull1DFormula
 :Weibull1DFormula rdf:type owl:Class ;
                   rdfs:subClassOf :InteractionFormula ;
+                  rdfs:comment "Class to represent mathematical formulas of the type Weibull 1D."@en ;
                   rdfs:label "Weibull 1D Formula"@en .
 
 
 ###  http://www.semanticweb.org/bimmer/ob#Window
 :Window rdf:type owl:Class ;
-        rdfs:subClassOf :System ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :controlType ;
-                          owl:allValuesFrom [ rdf:type rdfs:Datatype ;
-                                              owl:oneOf [ rdf:type rdf:List ;
-                                                          rdf:first "fixed" ;
-                                                          rdf:rest [ rdf:type rdf:List ;
-                                                                     rdf:first "operable" ;
-                                                                     rdf:rest rdf:nil
-                                                                   ]
-                                                        ]
-                                            ]
-                        ] ;
+        rdfs:subClassOf :System ;
         rdfs:label "Window"@en .
+
+
+###  http://www.w3.org/2006/time#DayOfWeek
+time:DayOfWeek rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Class ;
+                                     owl:oneOf ( time:Friday
+                                                 time:Monday
+                                                 time:Saturday
+                                                 time:Sunday
+                                                 time:Thursday
+                                                 time:Tuesday
+                                                 time:Wednesday
+                                               )
+                                   ] ;
+               rdfs:label "Day of The Week"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/bimmer/ob#ASHRAEAdaptiveComfort
+:ASHRAEAdaptiveComfort rdf:type owl:NamedIndividual ,
+                                :StandardThermalEnvelop .
+
+
+###  http://www.semanticweb.org/bimmer/ob#ASHRAEComfortEnvelop
+:ASHRAEComfortEnvelop rdf:type owl:NamedIndividual ,
+                               :StandardThermalEnvelop .
+
+
+###  http://www.semanticweb.org/bimmer/ob#All
+:All rdf:type owl:NamedIndividual ,
+              :Season .
+
+
+###  http://www.semanticweb.org/bimmer/ob#Evening
+:Evening rdf:type owl:NamedIndividual ,
+                  :TimeOfDay .
+
+
+###  http://www.semanticweb.org/bimmer/ob#Fall
+:Fall rdf:type owl:NamedIndividual ,
+               :Season .
+
+
+###  http://www.semanticweb.org/bimmer/ob#ISOAdaptiveComfort
+:ISOAdaptiveComfort rdf:type owl:NamedIndividual ,
+                             :StandardThermalEnvelop .
+
+
+###  http://www.semanticweb.org/bimmer/ob#Midnight
+:Midnight rdf:type owl:NamedIndividual ,
+                   :TimeOfDay .
+
+
+###  http://www.semanticweb.org/bimmer/ob#Morning
+:Morning rdf:type owl:NamedIndividual ,
+                  :TimeOfDay .
+
+
+###  http://www.semanticweb.org/bimmer/ob#Noon
+:Noon rdf:type owl:NamedIndividual ,
+               :TimeOfDay .
+
+
+###  http://www.semanticweb.org/bimmer/ob#Spring
+:Spring rdf:type owl:NamedIndividual ,
+                 :Season .
+
+
+###  http://www.semanticweb.org/bimmer/ob#Summer
+:Summer rdf:type owl:NamedIndividual ,
+                 :Season .
+
+
+###  http://www.semanticweb.org/bimmer/ob#Winter
+:Winter rdf:type owl:NamedIndividual ,
+                 :Season .
+
+
+###  http://www.w3.org/2006/time#Friday
+time:Friday rdf:type owl:NamedIndividual ,
+                     time:DayOfWeek .
+
+
+###  http://www.w3.org/2006/time#Monday
+time:Monday rdf:type owl:NamedIndividual ,
+                     time:DayOfWeek .
+
+
+###  http://www.w3.org/2006/time#Saturday
+time:Saturday rdf:type owl:NamedIndividual ,
+                       time:DayOfWeek .
+
+
+###  http://www.w3.org/2006/time#Sunday
+time:Sunday rdf:type owl:NamedIndividual ,
+                     time:DayOfWeek .
+
+
+###  http://www.w3.org/2006/time#Thursday
+time:Thursday rdf:type owl:NamedIndividual ,
+                       time:DayOfWeek .
+
+
+###  http://www.w3.org/2006/time#Tuesday
+time:Tuesday rdf:type owl:NamedIndividual ,
+                      time:DayOfWeek .
+
+
+###  http://www.w3.org/2006/time#Wednesday
+time:Wednesday rdf:type owl:NamedIndividual ,
+                        time:DayOfWeek .
 
 
 #################################################################
 #    General axioms
 #################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AccousticNeed
+                :IAQNeed
+                :ThermalNeed
+                :VisualNeed
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ConstantValueFormula
+                :Linear1DFormula
+                :Linear2DFormula
+                :Linear3DFormula
+                :Logit2DLinearFormula
+                :Logit3DLinearFormula
+                :Logit4DLinearFormula
+                :Quadratic1DFormula
+                :Weibull1DFormula
+              )
+] .
+
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :DaylightFactorParameter
@@ -1355,6 +1243,23 @@ dcterms:modified rdf:type owl:AnnotationProperty .
                 :Thermostat
                 :Window
               )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Inaction
+                :Interaction
+                :Movement
+                :Report
+              )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :ASHRAEAdaptiveComfort
+                        :ASHRAEComfortEnvelop
+                        :ISOAdaptiveComfort
+                      )
 ] .
 
 
