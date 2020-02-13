@@ -25,6 +25,9 @@ This section provides details for each class and property defined by Ontology mo
             title="http://www.semanticweb.org/bimmer/ob#ConstantValueFormula">Constant Value Formula</a>
       </li>
       <li>
+         <a href="#http://www.w3.org/2006/time#DayOfWeek" title="http://www.w3.org/2006/time#DayOfWeek">Day of The Week</a>
+      </li>
+      <li>
          <a href="#DaylightFactorParameter"
             title="http://www.semanticweb.org/bimmer/ob#DaylightFactorParameter">Daylight Factor Parameter</a>
       </li>
@@ -32,15 +35,13 @@ This section provides details for each class and property defined by Ontology mo
          <a href="#Driver" title="http://www.semanticweb.org/bimmer/ob#Driver">Driver</a>
       </li>
       <li>
-         <a href="#DriverEvent"
-            title="http://www.semanticweb.org/bimmer/ob#DriverEvent">Driver Event</a>
+         <a href="#DriverEvent" title="http://www.semanticweb.org/bimmer/ob#DriverEvent">Driver Event</a>
       </li>
       <li>
          <a href="#DriverTime" title="http://www.semanticweb.org/bimmer/ob#DriverTime">Driver Time</a>
       </li>
       <li>
-         <a href="#Environment"
-            title="http://www.semanticweb.org/bimmer/ob#Environment">Environment</a>
+         <a href="#Environment" title="http://www.semanticweb.org/bimmer/ob#Environment">Environment</a>
       </li>
       <li>
          <a href="#EnvironmentParameter"
@@ -171,6 +172,9 @@ This section provides details for each class and property defined by Ontology mo
          <a href="#Schedule" title="http://www.semanticweb.org/bimmer/ob#Schedule">Schedule</a>
       </li>
       <li>
+         <a href="#Season" title="http://www.semanticweb.org/bimmer/ob#Season">Season</a>
+      </li>
+      <li>
          <a href="#Shade" title="http://www.semanticweb.org/bimmer/ob#Shade">Shade</a>
       </li>
       <li>
@@ -207,6 +211,9 @@ This section provides details for each class and property defined by Ontology mo
          <a href="#Thermostat" title="http://www.semanticweb.org/bimmer/ob#Thermostat">Thermostat</a>
       </li>
       <li>
+         <a href="#TimeOfDay" title="http://www.semanticweb.org/bimmer/ob#TimeOfDay">Time Of Day</a>
+      </li>
+      <li>
          <a href="#VisualNeed" title="http://www.semanticweb.org/bimmer/ob#VisualNeed">Visual Need</a>
       </li>
       <li>
@@ -231,6 +238,14 @@ This section provides details for each class and property defined by Ontology mo
                title="http://www.semanticweb.org/bimmer/ob#PhysicalNeed">Physical Need</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#IAQNeed" title="http://www.semanticweb.org/bimmer/ob#IAQNeed">IAQ Need</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ThermalNeed"
+               title="http://www.semanticweb.org/bimmer/ob#ThermalNeed">Thermal Need</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#VisualNeed" title="http://www.semanticweb.org/bimmer/ob#VisualNeed">Visual Need</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="Action">
@@ -241,7 +256,7 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Action</p>
       <div class="comment">
-         <span class="markdown">The action the occupant performs to satisfy its need.</span>
+         <span class="markdown">Actions are the interactions with systems or activities that occupants can perform to achieve environmental comfort.</span>
       </div>
       <dl class="description">
          <dt>has sub-classes</dt>
@@ -252,11 +267,6 @@ This section provides details for each class and property defined by Ontology mo
             <sup class="type-c" title="class">c</sup>, <a href="#Movement" title="http://www.semanticweb.org/bimmer/ob#Movement">Movement</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Report" title="http://www.semanticweb.org/bimmer/ob#Report">Report</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasAction" title="http://www.semanticweb.org/bimmer/ob#hasAction">has action</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -273,15 +283,6 @@ This section provides details for each class and property defined by Ontology mo
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#hasAction" title="http://www.semanticweb.org/bimmer/ob#hasAction">has action</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasDriver" title="http://www.semanticweb.org/bimmer/ob#hasDriver">has driver</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasNeed" title="http://www.semanticweb.org/bimmer/ob#hasNeed">has need</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#interactWith"
-               title="http://www.semanticweb.org/bimmer/ob#interactWith">interact with</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasBehavior" title="http://www.semanticweb.org/bimmer/ob#hasBehavior">has behavior</a>
@@ -332,12 +333,6 @@ This section provides details for each class and property defined by Ontology mo
                title="http://www.semanticweb.org/bimmer/ob#coefficientValue">coefficient value</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasCoefficient"
-               title="http://www.semanticweb.org/bimmer/ob#hasCoefficient">has coefficient</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
       </dl>
    </div>
    <div class="entity" id="ConstantValueFormula">
@@ -347,12 +342,63 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#ConstantValueFormula</p>
+      <div class="comment">
+         <span class="markdown">Class to represent mathematical formulas of the type Constant Value.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#InteractionFormula"
                title="http://www.semanticweb.org/bimmer/ob#InteractionFormula">Interaction Formula</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Linear1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear1DFormula">Linear 1D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear2DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear2DFormula">Linear 2D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear3DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear3DFormula">Linear 3D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit2DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit2DLinearFormula">Logit 2D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit3DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit3DLinearFormula">Logit 3D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit4DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit4DLinearFormula">Logit 4D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Quadratic1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Quadratic1DFormula">Quadratic 1D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Weibull1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Weibull1DFormula">Weibull 1D Formula</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/time#DayOfWeek">
+      <h3>Day of The Week<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/time#DayOfWeek</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>{ <a href="#http://www.w3.org/2006/time#Friday" title="http://www.w3.org/2006/time#Friday">friday</a> , <a href="#http://www.w3.org/2006/time#Monday" title="http://www.w3.org/2006/time#Monday">monday</a> , <a href="#http://www.w3.org/2006/time#Saturday" title="http://www.w3.org/2006/time#Saturday">saturday</a> , <a href="#http://www.w3.org/2006/time#Sunday" title="http://www.w3.org/2006/time#Sunday">sunday</a> , <a href="#http://www.w3.org/2006/time#Thursday" title="http://www.w3.org/2006/time#Thursday">thursday</a> , <a href="#http://www.w3.org/2006/time#Tuesday" title="http://www.w3.org/2006/time#Tuesday">tuesday</a> , <a href="#http://www.w3.org/2006/time#Wednesday" title="http://www.w3.org/2006/time#Wednesday">wednesday</a> }</dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasDayOfWeek" title="http://www.semanticweb.org/bimmer/ob#hasDayOfWeek">has day of week</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/time#Friday" title="http://www.w3.org/2006/time#Friday">friday</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2006/time#Monday" title="http://www.w3.org/2006/time#Monday">monday</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2006/time#Saturday" title="http://www.w3.org/2006/time#Saturday">saturday</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2006/time#Sunday" title="http://www.w3.org/2006/time#Sunday">sunday</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2006/time#Thursday" title="http://www.w3.org/2006/time#Thursday">thursday</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2006/time#Tuesday" title="http://www.w3.org/2006/time#Tuesday">tuesday</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://www.w3.org/2006/time#Wednesday" title="http://www.w3.org/2006/time#Wednesday">wednesday</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -403,28 +449,20 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Driver</p>
       <div class="comment">
-         <span class="markdown">Circumstances that motivate the occupant behavior.</span>
+         <span class="markdown">Drivers represent the environmental factors that stimulate occupants to fulfill a physical, physiological or psychological need.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasDriverTime"
-               title="http://www.semanticweb.org/bimmer/ob#hasDriverTime">has driver time</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasEnvironment"
-               title="http://www.semanticweb.org/bimmer/ob#hasEnvironment">has environment</a>
+            <a href="#influencedByEnvironment"
+               title="http://www.semanticweb.org/bimmer/ob#influencedByEnvironment">influenced by environment</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#influencedByHabit"
                title="http://www.semanticweb.org/bimmer/ob#influencedByHabit">influenced by habit</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#occursWithinSpace"
-               title="http://www.semanticweb.org/bimmer/ob#occursWithinSpace">occurs within space</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#triggeredByEvent"
-               title="http://www.semanticweb.org/bimmer/ob#triggeredByEvent">triggered by event</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasDriver" title="http://www.semanticweb.org/bimmer/ob#hasDriver">has driver</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#occursAt" title="http://www.semanticweb.org/bimmer/ob#occursAt">occurs at</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#occursIn" title="http://www.semanticweb.org/bimmer/ob#occursIn">occurs in</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#triggeredBy" title="http://www.semanticweb.org/bimmer/ob#triggeredBy">triggered by</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -439,10 +477,7 @@ This section provides details for each class and property defined by Ontology mo
       <dl class="description">
          <dt>is in range of</dt>
          <dd>
-            <a href="#definedByEvent"
-               title="http://www.semanticweb.org/bimmer/ob#definedByEvent">defined by event</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#triggeredByEvent"
-               title="http://www.semanticweb.org/bimmer/ob#triggeredByEvent">triggered by event</a>
+            <a href="#triggeredBy" title="http://www.semanticweb.org/bimmer/ob#triggeredBy">triggered by</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -462,15 +497,15 @@ This section provides details for each class and property defined by Ontology mo
          <dd/>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#dayOfWeek" title="http://www.semanticweb.org/bimmer/ob#dayOfWeek">day of week</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#seasonTime" title="http://www.semanticweb.org/bimmer/ob#seasonTime">season time</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#timeOfDay" title="http://www.semanticweb.org/bimmer/ob#timeOfDay">time of day</a>
-            <sup class="type-dp" title="data property">dp</sup>
+            <a href="#hasDayOfWeek" title="http://www.semanticweb.org/bimmer/ob#hasDayOfWeek">has day of week</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSeason" title="http://www.semanticweb.org/bimmer/ob#hasSeason">has season</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasTimeOfDay"
+               title="http://www.semanticweb.org/bimmer/ob#hasTimeOfDay">has time of day</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasDriverTime"
-               title="http://www.semanticweb.org/bimmer/ob#hasDriverTime">has driver time</a>
+            <a href="#occursAt" title="http://www.semanticweb.org/bimmer/ob#occursAt">occurs at</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -496,8 +531,8 @@ This section provides details for each class and property defined by Ontology mo
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasEnvironment"
-               title="http://www.semanticweb.org/bimmer/ob#hasEnvironment">has environment</a>
+            <a href="#influencedByEnvironment"
+               title="http://www.semanticweb.org/bimmer/ob#influencedByEnvironment">influenced by environment</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -549,8 +584,6 @@ This section provides details for each class and property defined by Ontology mo
          <dd>
             <a href="#hasEnvironmentParameter"
                title="http://www.semanticweb.org/bimmer/ob#hasEnvironmentParameter">has environment parameter</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasIndependentVariable"
-               title="http://www.semanticweb.org/bimmer/ob#hasIndependentVariable">has independent variable</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#relatedTo" title="http://www.semanticweb.org/bimmer/ob#relatedTo">related to</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -599,9 +632,14 @@ This section provides details for each class and property defined by Ontology mo
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#definedByEvent"
-               title="http://www.semanticweb.org/bimmer/ob#definedByEvent">defined by event</a>
-            <sup class="type-op" title="object property">op</sup>
+            <a href="#typicalTime" title="http://www.semanticweb.org/bimmer/ob#typicalTime">typical time</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#SpaceOccupancySpecification"
+               title="http://www.semanticweb.org/bimmer/ob#SpaceOccupancySpecification">Space Occupancy Specification</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -701,6 +739,15 @@ This section provides details for each class and property defined by Ontology mo
                title="http://www.semanticweb.org/bimmer/ob#PhysicalNeed">Physical Need</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#AccousticNeed"
+               title="http://www.semanticweb.org/bimmer/ob#AccousticNeed">Accoustic Need</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ThermalNeed"
+               title="http://www.semanticweb.org/bimmer/ob#ThermalNeed">Thermal Need</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#VisualNeed" title="http://www.semanticweb.org/bimmer/ob#VisualNeed">Visual Need</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="IAQParameter">
@@ -789,12 +836,20 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Inaction</p>
       <div class="comment">
-         <span class="markdown">The Inaction class represents the decision of an occupant to not act and remain uncomfortable within a space</span>
+         <span class="markdown">The Inaction class represents the decision of an occupant to not act and remain uncomfortable within a space.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#Action" title="http://www.semanticweb.org/bimmer/ob#Action">Action</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Interaction"
+               title="http://www.semanticweb.org/bimmer/ob#Interaction">Interaction</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Movement" title="http://www.semanticweb.org/bimmer/ob#Movement">Movement</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Report" title="http://www.semanticweb.org/bimmer/ob#Report">Report</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -815,13 +870,12 @@ This section provides details for each class and property defined by Ontology mo
             <a href="#Action" title="http://www.semanticweb.org/bimmer/ob#Action">Action</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is in domain of</dt>
+         <dt>is disjoint with</dt>
          <dd>
-            <a href="#interactionType"
-               title="http://www.semanticweb.org/bimmer/ob#interactionType">interaction type</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#modeledByFormula"
-               title="http://www.semanticweb.org/bimmer/ob#modeledByFormula">modeled by formula</a>
-            <sup class="type-op" title="object property">op</sup>
+            <a href="#Inaction" title="http://www.semanticweb.org/bimmer/ob#Inaction">Inaction</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Movement" title="http://www.semanticweb.org/bimmer/ob#Movement">Movement</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Report" title="http://www.semanticweb.org/bimmer/ob#Report">Report</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -832,6 +886,9 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#InteractionFormula</p>
+      <div class="comment">
+         <span class="markdown">Formula to model the probability of interaction between ocupant and system.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
@@ -863,12 +920,6 @@ This section provides details for each class and property defined by Ontology mo
                title="http://www.semanticweb.org/bimmer/ob#hasCoefficient">has coefficient</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasIndependentVariable"
                title="http://www.semanticweb.org/bimmer/ob#hasIndependentVariable">has independent variable</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#modeledByFormula"
-               title="http://www.semanticweb.org/bimmer/ob#modeledByFormula">modeled by formula</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -904,11 +955,34 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Linear1DFormula</p>
+      <div class="comment">
+         <span class="markdown">Class to represent mathematical formulas of the type Linear 1D.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#InteractionFormula"
                title="http://www.semanticweb.org/bimmer/ob#InteractionFormula">Interaction Formula</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ConstantValueFormula"
+               title="http://www.semanticweb.org/bimmer/ob#ConstantValueFormula">Constant Value Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear2DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear2DFormula">Linear 2D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear3DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear3DFormula">Linear 3D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit2DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit2DLinearFormula">Logit 2D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit3DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit3DLinearFormula">Logit 3D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit4DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit4DLinearFormula">Logit 4D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Quadratic1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Quadratic1DFormula">Quadratic 1D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Weibull1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Weibull1DFormula">Weibull 1D Formula</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -920,11 +994,34 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Linear2DFormula</p>
+      <div class="comment">
+         <span class="markdown">Class to represent mathematical formulas of the type Linear 2D.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#InteractionFormula"
                title="http://www.semanticweb.org/bimmer/ob#InteractionFormula">Interaction Formula</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ConstantValueFormula"
+               title="http://www.semanticweb.org/bimmer/ob#ConstantValueFormula">Constant Value Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear1DFormula">Linear 1D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear3DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear3DFormula">Linear 3D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit2DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit2DLinearFormula">Logit 2D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit3DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit3DLinearFormula">Logit 3D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit4DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit4DLinearFormula">Logit 4D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Quadratic1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Quadratic1DFormula">Quadratic 1D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Weibull1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Weibull1DFormula">Weibull 1D Formula</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -936,11 +1033,34 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Linear3DFormula</p>
+      <div class="comment">
+         <span class="markdown">Class to represent mathematical formulas of the type Linear 3D.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#InteractionFormula"
                title="http://www.semanticweb.org/bimmer/ob#InteractionFormula">Interaction Formula</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ConstantValueFormula"
+               title="http://www.semanticweb.org/bimmer/ob#ConstantValueFormula">Constant Value Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear1DFormula">Linear 1D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear2DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear2DFormula">Linear 2D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit2DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit2DLinearFormula">Logit 2D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit3DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit3DLinearFormula">Logit 3D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit4DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit4DLinearFormula">Logit 4D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Quadratic1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Quadratic1DFormula">Quadratic 1D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Weibull1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Weibull1DFormula">Weibull 1D Formula</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -952,11 +1072,34 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Logit2DLinearFormula</p>
+      <div class="comment">
+         <span class="markdown">Class to represent mathematical formulas of the type Logit 2D Linear.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#InteractionFormula"
                title="http://www.semanticweb.org/bimmer/ob#InteractionFormula">Interaction Formula</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ConstantValueFormula"
+               title="http://www.semanticweb.org/bimmer/ob#ConstantValueFormula">Constant Value Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear1DFormula">Linear 1D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear2DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear2DFormula">Linear 2D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear3DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear3DFormula">Linear 3D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit3DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit3DLinearFormula">Logit 3D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit4DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit4DLinearFormula">Logit 4D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Quadratic1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Quadratic1DFormula">Quadratic 1D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Weibull1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Weibull1DFormula">Weibull 1D Formula</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -968,11 +1111,34 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Logit3DLinearFormula</p>
+      <div class="comment">
+         <span class="markdown">Class to represent mathematical formulas of the type Logit 3D Linear.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#InteractionFormula"
                title="http://www.semanticweb.org/bimmer/ob#InteractionFormula">Interaction Formula</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ConstantValueFormula"
+               title="http://www.semanticweb.org/bimmer/ob#ConstantValueFormula">Constant Value Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear1DFormula">Linear 1D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear2DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear2DFormula">Linear 2D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear3DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear3DFormula">Linear 3D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit2DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit2DLinearFormula">Logit 2D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit4DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit4DLinearFormula">Logit 4D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Quadratic1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Quadratic1DFormula">Quadratic 1D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Weibull1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Weibull1DFormula">Weibull 1D Formula</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -984,11 +1150,34 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Logit4DLinearFormula</p>
+      <div class="comment">
+         <span class="markdown">Class to represent mathematical formulas of the type Logit 4D Linear.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#InteractionFormula"
                title="http://www.semanticweb.org/bimmer/ob#InteractionFormula">Interaction Formula</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ConstantValueFormula"
+               title="http://www.semanticweb.org/bimmer/ob#ConstantValueFormula">Constant Value Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear1DFormula">Linear 1D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear2DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear2DFormula">Linear 2D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear3DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear3DFormula">Linear 3D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit2DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit2DLinearFormula">Logit 2D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit3DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit3DLinearFormula">Logit 3D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Quadratic1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Quadratic1DFormula">Quadratic 1D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Weibull1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Weibull1DFormula">Weibull 1D Formula</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1035,11 +1224,13 @@ This section provides details for each class and property defined by Ontology mo
             <a href="#Action" title="http://www.semanticweb.org/bimmer/ob#Action">Action</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is in domain of</dt>
+         <dt>is disjoint with</dt>
          <dd>
-            <a href="#modeledByModel"
-               title="http://www.semanticweb.org/bimmer/ob#modeledByModel">modeled by model</a>
-            <sup class="type-op" title="object property">op</sup>
+            <a href="#Inaction" title="http://www.semanticweb.org/bimmer/ob#Inaction">Inaction</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Interaction"
+               title="http://www.semanticweb.org/bimmer/ob#Interaction">Interaction</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Report" title="http://www.semanticweb.org/bimmer/ob#Report">Report</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -1050,20 +1241,12 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#MovementModel</p>
+      <div class="comment">
+         <span class="markdown">Model to define ocuppants movements inside a space</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#specifiedBy" title="http://www.semanticweb.org/bimmer/ob#specifiedBy">specified by</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#modeledByModel"
-               title="http://www.semanticweb.org/bimmer/ob#modeledByModel">modeled by model</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
       </dl>
    </div>
    <div class="entity" id="MovementSpecification">
@@ -1073,6 +1256,9 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#MovementSpecification</p>
+      <div class="comment">
+         <span class="markdown">Class to represent the data needed to model movements inside a space.</span>
+      </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
@@ -1081,11 +1267,6 @@ This section provides details for each class and property defined by Ontology mo
             <sup class="type-c" title="class">c</sup>, <a href="#SpaceOccupancySpecification"
                title="http://www.semanticweb.org/bimmer/ob#SpaceOccupancySpecification">Space Occupancy Specification</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#specifiedBy" title="http://www.semanticweb.org/bimmer/ob#specifiedBy">specified by</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -1096,6 +1277,9 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Need</p>
+      <div class="comment">
+         <span class="markdown">Needs represent the physical and non-physical requirements of the occupant that must be met in order to ensure satisfaction with their environment.</span>
+      </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
@@ -1107,7 +1291,8 @@ This section provides details for each class and property defined by Ontology mo
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasNeed" title="http://www.semanticweb.org/bimmer/ob#hasNeed">has need</a>
+            <a href="#influencedByNeed"
+               title="http://www.semanticweb.org/bimmer/ob#influencedByNeed">influenced by need</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -1158,6 +1343,9 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#NonPhysicalNeed</p>
+      <div class="comment">
+         <span class="markdown">Non physical comfort need that could lead to a behavior, such as privacy, schedule, etc.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -1236,7 +1424,7 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#ParameterRange</p>
       <div class="comment">
-         <span class="markdown">N-ary class to represent the minimum and maximm comfort values for an occupant.</span>
+         <span class="markdown">N-ary class to represent the minimum and maximm comfort values with respect to an environmental parameter.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -1252,8 +1440,8 @@ This section provides details for each class and property defined by Ontology mo
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#definedByParameterRange"
-               title="http://www.semanticweb.org/bimmer/ob#definedByParameterRange">defined by parameter range</a>
+            <a href="#definedByRange"
+               title="http://www.semanticweb.org/bimmer/ob#definedByRange">defined by range</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -1265,6 +1453,9 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#PhysicalNeed</p>
+      <div class="comment">
+         <span class="markdown">Physical comfort need that could lead to a behavior.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -1296,11 +1487,34 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Quadratic1DFormula</p>
+      <div class="comment">
+         <span class="markdown">Class to represent mathematical formulas of the type Quadratic 1D Linear.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#InteractionFormula"
                title="http://www.semanticweb.org/bimmer/ob#InteractionFormula">Interaction Formula</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ConstantValueFormula"
+               title="http://www.semanticweb.org/bimmer/ob#ConstantValueFormula">Constant Value Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear1DFormula">Linear 1D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear2DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear2DFormula">Linear 2D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear3DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear3DFormula">Linear 3D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit2DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit2DLinearFormula">Logit 2D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit3DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit3DLinearFormula">Logit 3D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit4DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit4DLinearFormula">Logit 4D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Weibull1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Weibull1DFormula">Weibull 1D Formula</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1399,6 +1613,14 @@ This section provides details for each class and property defined by Ontology mo
             <a href="#Action" title="http://www.semanticweb.org/bimmer/ob#Action">Action</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Inaction" title="http://www.semanticweb.org/bimmer/ob#Inaction">Inaction</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Interaction"
+               title="http://www.semanticweb.org/bimmer/ob#Interaction">Interaction</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Movement" title="http://www.semanticweb.org/bimmer/ob#Movement">Movement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="Schedule">
@@ -1408,6 +1630,9 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Schedule</p>
+      <div class="comment">
+         <span class="markdown">N-ary class to represent the duration, start time and end time of an event.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
@@ -1419,8 +1644,35 @@ This section provides details for each class and property defined by Ontology mo
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasSchedule" title="http://www.semanticweb.org/bimmer/ob#hasSchedule">has schedule</a>
+            <a href="#programmedAt"
+               title="http://www.semanticweb.org/bimmer/ob#programmedAt">programmed at</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Season">
+      <h3>Season<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Season</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>{ <a href="#All" title="http://www.semanticweb.org/bimmer/ob#All">all</a> , <a href="#Fall" title="http://www.semanticweb.org/bimmer/ob#Fall">fall</a> , <a href="#Spring" title="http://www.semanticweb.org/bimmer/ob#Spring">spring</a> , <a href="#Summer" title="http://www.semanticweb.org/bimmer/ob#Summer">summer</a> , <a href="#Winter" title="http://www.semanticweb.org/bimmer/ob#Winter">winter</a> }</dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasSeason" title="http://www.semanticweb.org/bimmer/ob#hasSeason">has season</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#All" title="http://www.semanticweb.org/bimmer/ob#All">all</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Fall" title="http://www.semanticweb.org/bimmer/ob#Fall">fall</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Spring" title="http://www.semanticweb.org/bimmer/ob#Spring">spring</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Summer" title="http://www.semanticweb.org/bimmer/ob#Summer">summer</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Winter" title="http://www.semanticweb.org/bimmer/ob#Winter">winter</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -1509,16 +1761,12 @@ This section provides details for each class and property defined by Ontology mo
                title="http://www.semanticweb.org/bimmer/ob#maxNumberOccupants">max number occupants</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#minNumberOccupants"
                title="http://www.semanticweb.org/bimmer/ob#minNumberOccupants">min number occupants</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#spaceType" title="http://www.semanticweb.org/bimmer/ob#spaceType">space type</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#definedBySpace"
-               title="http://www.semanticweb.org/bimmer/ob#definedBySpace">defined by space</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasSpace" title="http://www.semanticweb.org/bimmer/ob#hasSpace">has space</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#occursWithinSpace"
-               title="http://www.semanticweb.org/bimmer/ob#occursWithinSpace">occurs within space</a>
+            <a href="#hasSpace" title="http://www.semanticweb.org/bimmer/ob#hasSpace">has space</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#occursIn" title="http://www.semanticweb.org/bimmer/ob#occursIn">occurs in</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -1539,11 +1787,15 @@ This section provides details for each class and property defined by Ontology mo
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#definedBySpace"
-               title="http://www.semanticweb.org/bimmer/ob#definedBySpace">defined by space</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#percentTimePresence"
+            <a href="#percentTimePresence"
                title="http://www.semanticweb.org/bimmer/ob#percentTimePresence">percent time presence</a>
             <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#EventSpecification"
+               title="http://www.semanticweb.org/bimmer/ob#EventSpecification">Event Specification</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -1555,17 +1807,26 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#StandardThermalEnvelop</p>
       <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>{ <a href="#ASHRAEAdaptiveComfort"
+               title="http://www.semanticweb.org/bimmer/ob#ASHRAEAdaptiveComfort">a s h r a e adaptive comfort</a> , <a href="#ASHRAEComfortEnvelop"
+               title="http://www.semanticweb.org/bimmer/ob#ASHRAEComfortEnvelop">a s h r a e comfort envelop</a> , <a href="#ISOAdaptiveComfort"
+               title="http://www.semanticweb.org/bimmer/ob#ISOAdaptiveComfort">i s o adaptive comfort</a> }</dd>
          <dt>has super-classes</dt>
          <dd>
             <a href="#ThermalComfortEnvelop"
                title="http://www.semanticweb.org/bimmer/ob#ThermalComfortEnvelop">Thermal Comfort Envelop</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is in domain of</dt>
+         <dt>has members</dt>
          <dd>
-            <a href="#standardType"
-               title="http://www.semanticweb.org/bimmer/ob#standardType">standard type</a>
-            <sup class="type-dp" title="data property">dp</sup>
+            <a href="#ASHRAEAdaptiveComfort"
+               title="http://www.semanticweb.org/bimmer/ob#ASHRAEAdaptiveComfort">a s h r a e adaptive comfort</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#ASHRAEComfortEnvelop"
+               title="http://www.semanticweb.org/bimmer/ob#ASHRAEComfortEnvelop">a s h r a e comfort envelop</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#ISOAdaptiveComfort"
+               title="http://www.semanticweb.org/bimmer/ob#ISOAdaptiveComfort">i s o adaptive comfort</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
          <dt>is disjoint with</dt>
          <dd>
@@ -1582,6 +1843,9 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#System</p>
+      <div class="comment">
+         <span class="markdown">System refer to the equipment or mechanisms within the building with which occupants may interact with to restore or maintain environmental comfort.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
@@ -1597,14 +1861,13 @@ This section provides details for each class and property defined by Ontology mo
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#controlType" title="http://www.semanticweb.org/bimmer/ob#controlType">control type</a>
-            <sup class="type-dp" title="data property">dp</sup>
+            <a href="#operationMode"
+               title="http://www.semanticweb.org/bimmer/ob#operationMode">operation mode</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasSystem" title="http://www.semanticweb.org/bimmer/ob#hasSystem">has system</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#interactWith"
-               title="http://www.semanticweb.org/bimmer/ob#interactWith">interact with</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -1666,8 +1929,8 @@ This section provides details for each class and property defined by Ontology mo
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasThermalComfortEnvelop"
-               title="http://www.semanticweb.org/bimmer/ob#hasThermalComfortEnvelop">has thermal comfort envelop</a>
+            <a href="#definedByEnvelop"
+               title="http://www.semanticweb.org/bimmer/ob#definedByEnvelop">defined by envelop</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -1688,9 +1951,17 @@ This section provides details for each class and property defined by Ontology mo
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasThermalComfortEnvelop"
-               title="http://www.semanticweb.org/bimmer/ob#hasThermalComfortEnvelop">has thermal comfort envelop</a>
+            <a href="#definedByEnvelop"
+               title="http://www.semanticweb.org/bimmer/ob#definedByEnvelop">defined by envelop</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#AccousticNeed"
+               title="http://www.semanticweb.org/bimmer/ob#AccousticNeed">Accoustic Need</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#IAQNeed" title="http://www.semanticweb.org/bimmer/ob#IAQNeed">IAQ Need</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#VisualNeed" title="http://www.semanticweb.org/bimmer/ob#VisualNeed">Visual Need</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -1718,6 +1989,32 @@ This section provides details for each class and property defined by Ontology mo
          </dd>
       </dl>
    </div>
+   <div class="entity" id="TimeOfDay">
+      <h3>Time Of Day<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#TimeOfDay</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>{ <a href="#Evening" title="http://www.semanticweb.org/bimmer/ob#Evening">evening</a> , <a href="#Midnight" title="http://www.semanticweb.org/bimmer/ob#Midnight">midnight</a> , <a href="#Morning" title="http://www.semanticweb.org/bimmer/ob#Morning">morning</a> , <a href="#Noon" title="http://www.semanticweb.org/bimmer/ob#Noon">noon</a> }</dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasTimeOfDay"
+               title="http://www.semanticweb.org/bimmer/ob#hasTimeOfDay">has time of day</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Evening" title="http://www.semanticweb.org/bimmer/ob#Evening">evening</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Midnight" title="http://www.semanticweb.org/bimmer/ob#Midnight">midnight</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Morning" title="http://www.semanticweb.org/bimmer/ob#Morning">morning</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Noon" title="http://www.semanticweb.org/bimmer/ob#Noon">noon</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="VisualNeed">
       <h3>Visual Need<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -1732,6 +2029,15 @@ This section provides details for each class and property defined by Ontology mo
                title="http://www.semanticweb.org/bimmer/ob#PhysicalNeed">Physical Need</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#AccousticNeed"
+               title="http://www.semanticweb.org/bimmer/ob#AccousticNeed">Accoustic Need</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#IAQNeed" title="http://www.semanticweb.org/bimmer/ob#IAQNeed">IAQ Need</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ThermalNeed"
+               title="http://www.semanticweb.org/bimmer/ob#ThermalNeed">Thermal Need</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="Weibull1DFormula">
@@ -1741,11 +2047,34 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Weibull1DFormula</p>
+      <div class="comment">
+         <span class="markdown">Class to represent mathematical formulas of the type Weibull 1D.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#InteractionFormula"
                title="http://www.semanticweb.org/bimmer/ob#InteractionFormula">Interaction Formula</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ConstantValueFormula"
+               title="http://www.semanticweb.org/bimmer/ob#ConstantValueFormula">Constant Value Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear1DFormula">Linear 1D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear2DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear2DFormula">Linear 2D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Linear3DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Linear3DFormula">Linear 3D Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit2DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit2DLinearFormula">Logit 2D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit3DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit3DLinearFormula">Logit 3D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Logit4DLinearFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Logit4DLinearFormula">Logit 4D Linear Formula</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Quadratic1DFormula"
+               title="http://www.semanticweb.org/bimmer/ob#Quadratic1DFormula">Quadratic 1D Formula</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1778,26 +2107,20 @@ This section provides details for each class and property defined by Ontology mo
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#definedByEvent"
-            title="http://www.semanticweb.org/bimmer/ob#definedByEvent">
-            <span>defined by event</span>
+         <a href="#definedByEnvelop"
+            title="http://www.semanticweb.org/bimmer/ob#definedByEnvelop">
+            <span>defined by envelop</span>
          </a>
       </li>
       <li>
-         <a href="#definedByParameterRange"
-            title="http://www.semanticweb.org/bimmer/ob#definedByParameterRange">
-            <span>defined by parameter range</span>
+         <a href="#definedByRange"
+            title="http://www.semanticweb.org/bimmer/ob#definedByRange">
+            <span>defined by range</span>
          </a>
       </li>
       <li>
-         <a href="#definedBySpace"
-            title="http://www.semanticweb.org/bimmer/ob#definedBySpace">
-            <span>defined by space</span>
-         </a>
-      </li>
-      <li>
-         <a href="#hasAction" title="http://www.semanticweb.org/bimmer/ob#hasAction">
-            <span>has action</span>
+         <a href="#detailedBy" title="http://www.semanticweb.org/bimmer/ob#detailedBy">
+            <span>detailed by</span>
          </a>
       </li>
       <li>
@@ -1812,20 +2135,8 @@ This section provides details for each class and property defined by Ontology mo
          </a>
       </li>
       <li>
-         <a href="#hasDriver" title="http://www.semanticweb.org/bimmer/ob#hasDriver">
-            <span>has driver</span>
-         </a>
-      </li>
-      <li>
-         <a href="#hasDriverTime"
-            title="http://www.semanticweb.org/bimmer/ob#hasDriverTime">
-            <span>has driver time</span>
-         </a>
-      </li>
-      <li>
-         <a href="#hasEnvironment"
-            title="http://www.semanticweb.org/bimmer/ob#hasEnvironment">
-            <span>has environment</span>
+         <a href="#hasDayOfWeek" title="http://www.semanticweb.org/bimmer/ob#hasDayOfWeek">
+            <span>has day of week</span>
          </a>
       </li>
       <li>
@@ -1846,18 +2157,13 @@ This section provides details for each class and property defined by Ontology mo
          </a>
       </li>
       <li>
-         <a href="#hasNeed" title="http://www.semanticweb.org/bimmer/ob#hasNeed">
-            <span>has need</span>
-         </a>
-      </li>
-      <li>
          <a href="#hasOccupant" title="http://www.semanticweb.org/bimmer/ob#hasOccupant">
             <span>has occupant</span>
          </a>
       </li>
       <li>
-         <a href="#hasSchedule" title="http://www.semanticweb.org/bimmer/ob#hasSchedule">
-            <span>has schedule</span>
+         <a href="#hasSeason" title="http://www.semanticweb.org/bimmer/ob#hasSeason">
+            <span>has season</span>
          </a>
       </li>
       <li>
@@ -1871,9 +2177,15 @@ This section provides details for each class and property defined by Ontology mo
          </a>
       </li>
       <li>
-         <a href="#hasThermalComfortEnvelop"
-            title="http://www.semanticweb.org/bimmer/ob#hasThermalComfortEnvelop">
-            <span>has thermal comfort envelop</span>
+         <a href="#hasTimeOfDay"
+            title="http://www.semanticweb.org/bimmer/ob#hasTimeOfDay">
+            <span>has time of day</span>
+         </a>
+      </li>
+      <li>
+         <a href="#influencedByEnvironment"
+            title="http://www.semanticweb.org/bimmer/ob#influencedByEnvironment">
+            <span>influenced by environment</span>
          </a>
       </li>
       <li>
@@ -1883,27 +2195,36 @@ This section provides details for each class and property defined by Ontology mo
          </a>
       </li>
       <li>
-         <a href="#interactWith"
-            title="http://www.semanticweb.org/bimmer/ob#interactWith">
-            <span>interact with</span>
+         <a href="#influencedByNeed"
+            title="http://www.semanticweb.org/bimmer/ob#influencedByNeed">
+            <span>influenced by need</span>
          </a>
       </li>
       <li>
-         <a href="#modeledByFormula"
-            title="http://www.semanticweb.org/bimmer/ob#modeledByFormula">
-            <span>modeled by formula</span>
+         <a href="#modeledBy" title="http://www.semanticweb.org/bimmer/ob#modeledBy">
+            <span>modeled by</span>
          </a>
       </li>
       <li>
-         <a href="#modeledByModel"
-            title="http://www.semanticweb.org/bimmer/ob#modeledByModel">
-            <span>modeled by model</span>
+         <a href="#occursAt" title="http://www.semanticweb.org/bimmer/ob#occursAt">
+            <span>occurs at</span>
          </a>
       </li>
       <li>
-         <a href="#occursWithinSpace"
-            title="http://www.semanticweb.org/bimmer/ob#occursWithinSpace">
-            <span>occurs within space</span>
+         <a href="#occursIn" title="http://www.semanticweb.org/bimmer/ob#occursIn">
+            <span>occurs in</span>
+         </a>
+      </li>
+      <li>
+         <a href="#operationMode"
+            title="http://www.semanticweb.org/bimmer/ob#operationMode">
+            <span>operation mode</span>
+         </a>
+      </li>
+      <li>
+         <a href="#programmedAt"
+            title="http://www.semanticweb.org/bimmer/ob#programmedAt">
+            <span>programmed at</span>
          </a>
       </li>
       <li>
@@ -1917,44 +2238,47 @@ This section provides details for each class and property defined by Ontology mo
          </a>
       </li>
       <li>
-         <a href="#triggeredByEvent"
-            title="http://www.semanticweb.org/bimmer/ob#triggeredByEvent">
-            <span>triggered by event</span>
+         <a href="#triggeredBy" title="http://www.semanticweb.org/bimmer/ob#triggeredBy">
+            <span>triggered by</span>
          </a>
       </li>
    </ul>
-   <div class="entity" id="definedByEvent">
-      <h3>defined by event<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="definedByEnvelop">
+      <h3>defined by envelop<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#definedByEvent</p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#definedByEnvelop</p>
       <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#EventSpecification"
-                  title="http://www.semanticweb.org/bimmer/ob#EventSpecification">Event Specification</a>
+               <a href="#ThermalNeed"
+                  title="http://www.semanticweb.org/bimmer/ob#ThermalNeed">Thermal Need</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#DriverEvent"
-                  title="http://www.semanticweb.org/bimmer/ob#DriverEvent">Driver Event</a>
+               <a href="#ThermalComfortEnvelop"
+                  title="http://www.semanticweb.org/bimmer/ob#ThermalComfortEnvelop">Thermal Comfort Envelop</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="definedByParameterRange">
-      <h3>defined by parameter range<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="definedByRange">
+      <h3>defined by range<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#definedByParameterRange</p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#definedByRange</p>
       <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
          <dl>
             <dt>has range</dt>
             <dd>
@@ -1965,50 +2289,13 @@ This section provides details for each class and property defined by Ontology mo
          </dl>
       </div>
    </div>
-   <div class="entity" id="definedBySpace">
-      <h3>defined by space<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="detailedBy">
+      <h3>detailed by<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#definedBySpace</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#SpaceOccupancySpecification"
-                  title="http://www.semanticweb.org/bimmer/ob#SpaceOccupancySpecification">Space Occupancy Specification</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Space" title="http://www.semanticweb.org/bimmer/ob#Space">Space</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasAction">
-      <h3>has action<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#hasAction</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Behavior" title="http://www.semanticweb.org/bimmer/ob#Behavior">Behavior</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Action" title="http://www.semanticweb.org/bimmer/ob#Action">Action</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#detailedBy</p>
    </div>
    <div class="entity" id="hasBehavior">
       <h3>has behavior<sup class="type-op" title="object property">op</sup>
@@ -2047,81 +2334,28 @@ This section provides details for each class and property defined by Ontology mo
                   title="http://www.semanticweb.org/bimmer/ob#InteractionFormula">Interaction Formula</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#CoefficientSchema"
-                  title="http://www.semanticweb.org/bimmer/ob#CoefficientSchema">Coefficient Schema</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasDriver">
-      <h3>has driver<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="hasDayOfWeek">
+      <h3>has day of week<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#hasDriver</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Behavior" title="http://www.semanticweb.org/bimmer/ob#Behavior">Behavior</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Driver" title="http://www.semanticweb.org/bimmer/ob#Driver">Driver</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasDriverTime">
-      <h3>has driver time<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#hasDriverTime</p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#hasDayOfWeek</p>
       <div class="description">
          <p>
             <strong>has characteristics:</strong> functional</p>
          <dl>
             <dt>has domain</dt>
-            <dd>
-               <a href="#Driver" title="http://www.semanticweb.org/bimmer/ob#Driver">Driver</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
             <dd>
                <a href="#DriverTime" title="http://www.semanticweb.org/bimmer/ob#DriverTime">Driver Time</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasEnvironment">
-      <h3>has environment<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#hasEnvironment</p>
-      <div class="description">
-         <p>
-            <strong>has characteristics:</strong> functional</p>
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Driver" title="http://www.semanticweb.org/bimmer/ob#Driver">Driver</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Environment"
-                  title="http://www.semanticweb.org/bimmer/ob#Environment">Environment</a>
+               <a href="#http://www.w3.org/2006/time#DayOfWeek" title="http://www.w3.org/2006/time#DayOfWeek">Day of The Week</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -2138,8 +2372,7 @@ This section provides details for each class and property defined by Ontology mo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Environment"
-                  title="http://www.semanticweb.org/bimmer/ob#Environment">Environment</a>
+               <a href="#Environment" title="http://www.semanticweb.org/bimmer/ob#Environment">Environment</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -2164,12 +2397,6 @@ This section provides details for each class and property defined by Ontology mo
             <dd>
                <a href="#InteractionFormula"
                   title="http://www.semanticweb.org/bimmer/ob#InteractionFormula">Interaction Formula</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#EnvironmentParameter"
-                  title="http://www.semanticweb.org/bimmer/ob#EnvironmentParameter">Environment Parameter</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -2197,28 +2424,6 @@ This section provides details for each class and property defined by Ontology mo
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasNeed">
-      <h3>has need<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#hasNeed</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Behavior" title="http://www.semanticweb.org/bimmer/ob#Behavior">Behavior</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Need" title="http://www.semanticweb.org/bimmer/ob#Need">Need</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="hasOccupant">
       <h3>has occupant<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -2241,18 +2446,25 @@ This section provides details for each class and property defined by Ontology mo
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasSchedule">
-      <h3>has schedule<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="hasSeason">
+      <h3>has season<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#hasSchedule</p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#hasSeason</p>
       <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DriverTime" title="http://www.semanticweb.org/bimmer/ob#DriverTime">Driver Time</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Schedule" title="http://www.semanticweb.org/bimmer/ob#Schedule">Schedule</a>
+               <a href="#Season" title="http://www.semanticweb.org/bimmer/ob#Season">Season</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -2302,25 +2514,47 @@ This section provides details for each class and property defined by Ontology mo
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasThermalComfortEnvelop">
-      <h3>has thermal comfort envelop<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="hasTimeOfDay">
+      <h3>has time of day<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#hasThermalComfortEnvelop</p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#hasTimeOfDay</p>
       <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#ThermalNeed"
-                  title="http://www.semanticweb.org/bimmer/ob#ThermalNeed">Thermal Need</a>
+               <a href="#DriverTime" title="http://www.semanticweb.org/bimmer/ob#DriverTime">Driver Time</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#ThermalComfortEnvelop"
-                  title="http://www.semanticweb.org/bimmer/ob#ThermalComfortEnvelop">Thermal Comfort Envelop</a>
+               <a href="#TimeOfDay" title="http://www.semanticweb.org/bimmer/ob#TimeOfDay">Time Of Day</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="influencedByEnvironment">
+      <h3>influenced by environment<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#influencedByEnvironment</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Driver" title="http://www.semanticweb.org/bimmer/ob#Driver">Driver</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Environment" title="http://www.semanticweb.org/bimmer/ob#Environment">Environment</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -2348,86 +2582,60 @@ This section provides details for each class and property defined by Ontology mo
          </dl>
       </div>
    </div>
-   <div class="entity" id="interactWith">
-      <h3>interact with<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="influencedByNeed">
+      <h3>influenced by need<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#interactWith</p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#influencedByNeed</p>
       <div class="description">
          <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Behavior" title="http://www.semanticweb.org/bimmer/ob#Behavior">Behavior</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#System" title="http://www.semanticweb.org/bimmer/ob#System">System</a>
+               <a href="#Need" title="http://www.semanticweb.org/bimmer/ob#Need">Need</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="modeledByFormula">
-      <h3>modeled by formula<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="modeledBy">
+      <h3>modeled by<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#modeledByFormula</p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#modeledBy</p>
+   </div>
+   <div class="entity" id="occursAt">
+      <h3>occurs at<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#occursAt</p>
       <div class="description">
-         <p>
-            <strong>has characteristics:</strong> functional</p>
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Interaction"
-                  title="http://www.semanticweb.org/bimmer/ob#Interaction">Interaction</a>
+               <a href="#Driver" title="http://www.semanticweb.org/bimmer/ob#Driver">Driver</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#InteractionFormula"
-                  title="http://www.semanticweb.org/bimmer/ob#InteractionFormula">Interaction Formula</a>
+               <a href="#DriverTime" title="http://www.semanticweb.org/bimmer/ob#DriverTime">Driver Time</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="modeledByModel">
-      <h3>modeled by model<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="occursIn">
+      <h3>occurs in<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#modeledByModel</p>
-      <div class="description">
-         <p>
-            <strong>has characteristics:</strong> functional</p>
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Movement" title="http://www.semanticweb.org/bimmer/ob#Movement">Movement</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#MovementModel"
-                  title="http://www.semanticweb.org/bimmer/ob#MovementModel">Movement Model</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="occursWithinSpace">
-      <h3>occurs within space<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#occursWithinSpace</p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#occursIn</p>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -2438,6 +2646,44 @@ This section provides details for each class and property defined by Ontology mo
             <dt>has range</dt>
             <dd>
                <a href="#Space" title="http://www.semanticweb.org/bimmer/ob#Space">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="operationMode">
+      <h3>operation mode<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#operationMode</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#System" title="http://www.semanticweb.org/bimmer/ob#System">System</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="programmedAt">
+      <h3>programmed at<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#programmedAt</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Schedule" title="http://www.semanticweb.org/bimmer/ob#Schedule">Schedule</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -2476,32 +2722,14 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#specifiedBy</p>
-      <div class="description">
-         <p>
-            <strong>has characteristics:</strong> functional</p>
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#MovementModel"
-                  title="http://www.semanticweb.org/bimmer/ob#MovementModel">Movement Model</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#MovementSpecification"
-                  title="http://www.semanticweb.org/bimmer/ob#MovementSpecification">Movement Specification</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
    </div>
-   <div class="entity" id="triggeredByEvent">
-      <h3>triggered by event<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="triggeredBy">
+      <h3>triggered by<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#triggeredByEvent</p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#triggeredBy</p>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -2511,8 +2739,7 @@ This section provides details for each class and property defined by Ontology mo
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#DriverEvent"
-                  title="http://www.semanticweb.org/bimmer/ob#DriverEvent">Driver Event</a>
+               <a href="#DriverEvent" title="http://www.semanticweb.org/bimmer/ob#DriverEvent">Driver Event</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -2540,16 +2767,6 @@ This section provides details for each class and property defined by Ontology mo
          </a>
       </li>
       <li>
-         <a href="#controlType" title="http://www.semanticweb.org/bimmer/ob#controlType">
-            <span>control type</span>
-         </a>
-      </li>
-      <li>
-         <a href="#dayOfWeek" title="http://www.semanticweb.org/bimmer/ob#dayOfWeek">
-            <span>day of week</span>
-         </a>
-      </li>
-      <li>
          <a href="#description" title="http://www.semanticweb.org/bimmer/ob#description">
             <span>description</span>
          </a>
@@ -2567,12 +2784,6 @@ This section provides details for each class and property defined by Ontology mo
       <li>
          <a href="#identifier" title="http://www.semanticweb.org/bimmer/ob#identifier">
             <span>identifier</span>
-         </a>
-      </li>
-      <li>
-         <a href="#interactionType"
-            title="http://www.semanticweb.org/bimmer/ob#interactionType">
-            <span>interaction type</span>
          </a>
       </li>
       <li>
@@ -2653,29 +2864,13 @@ This section provides details for each class and property defined by Ontology mo
          </a>
       </li>
       <li>
-         <a href="#seasonTime" title="http://www.semanticweb.org/bimmer/ob#seasonTime">
-            <span>season time</span>
-         </a>
-      </li>
-      <li>
-         <a href="#spaceType" title="http://www.semanticweb.org/bimmer/ob#spaceType">
-            <span>space type</span>
-         </a>
-      </li>
-      <li>
-         <a href="#standardType"
-            title="http://www.semanticweb.org/bimmer/ob#standardType">
-            <span>standard type</span>
-         </a>
-      </li>
-      <li>
          <a href="#startTime" title="http://www.semanticweb.org/bimmer/ob#startTime">
             <span>start time</span>
          </a>
       </li>
       <li>
-         <a href="#timeOfDay" title="http://www.semanticweb.org/bimmer/ob#timeOfDay">
-            <span>time of day</span>
+         <a href="#typicalTime" title="http://www.semanticweb.org/bimmer/ob#typicalTime">
+            <span>typical time</span>
          </a>
       </li>
    </ul>
@@ -2748,46 +2943,6 @@ This section provides details for each class and property defined by Ontology mo
          </dl>
       </div>
    </div>
-   <div class="entity" id="controlType">
-      <h3>control type<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#controlType</p>
-      <div class="description">
-         <p>
-            <strong>has characteristics:</strong> functional</p>
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#System" title="http://www.semanticweb.org/bimmer/ob#System">System</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="dayOfWeek">
-      <h3>day of week<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#dayOfWeek</p>
-      <div class="description">
-         <p>
-            <strong>has characteristics:</strong> functional</p>
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#DriverTime" title="http://www.semanticweb.org/bimmer/ob#DriverTime">Driver Time</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>{ "Friday" , "Monday" , "Saturday" , "Sunday" , "Thursday" , "Tuesday" , "Wednesday" }</dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="description">
       <h3>description<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -2817,7 +2972,7 @@ This section provides details for each class and property defined by Ontology mo
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
             </dd>
          </dl>
       </div>
@@ -2852,28 +3007,6 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#identifier</p>
-   </div>
-   <div class="entity" id="interactionType">
-      <h3>interaction type<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#interactionType</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Interaction"
-                  title="http://www.semanticweb.org/bimmer/ob#Interaction">Interaction</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
    </div>
    <div class="entity" id="maxNumberOccupants">
       <h3>max number occupants<sup class="type-dp" title="data property">dp</sup>
@@ -2937,6 +3070,10 @@ This section provides details for each class and property defined by Ontology mo
             <dd>
                <a href="#Meeting" title="http://www.semanticweb.org/bimmer/ob#Meeting">Meeting</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
             </dd>
          </dl>
       </div>
@@ -3169,68 +3306,6 @@ This section provides details for each class and property defined by Ontology mo
          </dl>
       </div>
    </div>
-   <div class="entity" id="seasonTime">
-      <h3>season time<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#seasonTime</p>
-      <div class="description">
-         <p>
-            <strong>has characteristics:</strong> functional</p>
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#DriverTime" title="http://www.semanticweb.org/bimmer/ob#DriverTime">Driver Time</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>{ "All" , "Fall" , "Spring" , "Summer" , "Winter" }</dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="spaceType">
-      <h3>space type<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#spaceType</p>
-      <div class="description">
-         <p>
-            <strong>has characteristics:</strong> functional</p>
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Space" title="http://www.semanticweb.org/bimmer/ob#Space">Space</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>{ "Corridor" , "MeetingRoom" , "Office" , "OfficePrivate" , "OfficeShared" , "Other" , "Outdoor" , "ResidentialOwn" , "ResidentialRent" }</dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="standardType">
-      <h3>standard type<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#standardType</p>
-      <div class="description">
-         <p>
-            <strong>has characteristics:</strong> functional</p>
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#StandardThermalEnvelop"
-                  title="http://www.semanticweb.org/bimmer/ob#StandardThermalEnvelop">Standard Comfort Envelop</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="startTime">
       <h3>start time<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -3254,24 +3329,415 @@ This section provides details for each class and property defined by Ontology mo
          </dl>
       </div>
    </div>
-   <div class="entity" id="timeOfDay">
-      <h3>time of day<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="typicalTime">
+      <h3>typical time<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#timeOfDay</p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#typicalTime</p>
       <div class="description">
          <p>
             <strong>has characteristics:</strong> functional</p>
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#DriverTime" title="http://www.semanticweb.org/bimmer/ob#DriverTime">Driver Time</a>
+               <a href="#EventSpecification"
+                  title="http://www.semanticweb.org/bimmer/ob#EventSpecification">Event Specification</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#ASHRAEAdaptiveComfort"
+            title="http://www.semanticweb.org/bimmer/ob#ASHRAEAdaptiveComfort">
+            <span>a s h r a e adaptive comfort</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ASHRAEComfortEnvelop"
+            title="http://www.semanticweb.org/bimmer/ob#ASHRAEComfortEnvelop">
+            <span>a s h r a e comfort envelop</span>
+         </a>
+      </li>
+      <li>
+         <a href="#All" title="http://www.semanticweb.org/bimmer/ob#All">
+            <span>all</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Evening" title="http://www.semanticweb.org/bimmer/ob#Evening">
+            <span>evening</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Fall" title="http://www.semanticweb.org/bimmer/ob#Fall">
+            <span>fall</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/time#Friday" title="http://www.w3.org/2006/time#Friday">
+            <span>friday</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ISOAdaptiveComfort"
+            title="http://www.semanticweb.org/bimmer/ob#ISOAdaptiveComfort">
+            <span>i s o adaptive comfort</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Midnight" title="http://www.semanticweb.org/bimmer/ob#Midnight">
+            <span>midnight</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/time#Monday" title="http://www.w3.org/2006/time#Monday">
+            <span>monday</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Morning" title="http://www.semanticweb.org/bimmer/ob#Morning">
+            <span>morning</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Noon" title="http://www.semanticweb.org/bimmer/ob#Noon">
+            <span>noon</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/time#Saturday" title="http://www.w3.org/2006/time#Saturday">
+            <span>saturday</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Spring" title="http://www.semanticweb.org/bimmer/ob#Spring">
+            <span>spring</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Summer" title="http://www.semanticweb.org/bimmer/ob#Summer">
+            <span>summer</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/time#Sunday" title="http://www.w3.org/2006/time#Sunday">
+            <span>sunday</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/time#Thursday" title="http://www.w3.org/2006/time#Thursday">
+            <span>thursday</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/time#Tuesday" title="http://www.w3.org/2006/time#Tuesday">
+            <span>tuesday</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2006/time#Wednesday" title="http://www.w3.org/2006/time#Wednesday">
+            <span>wednesday</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Winter" title="http://www.semanticweb.org/bimmer/ob#Winter">
+            <span>winter</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="ASHRAEAdaptiveComfort">
+      <h3>a s h r a e adaptive comfort<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#ASHRAEAdaptiveComfort</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StandardThermalEnvelop"
+               title="http://www.semanticweb.org/bimmer/ob#StandardThermalEnvelop">Standard Comfort Envelop</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ASHRAEComfortEnvelop">
+      <h3>a s h r a e comfort envelop<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#ASHRAEComfortEnvelop</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StandardThermalEnvelop"
+               title="http://www.semanticweb.org/bimmer/ob#StandardThermalEnvelop">Standard Comfort Envelop</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="All">
+      <h3>all<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#All</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Season" title="http://www.semanticweb.org/bimmer/ob#Season">Season</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Evening">
+      <h3>evening<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Evening</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#TimeOfDay" title="http://www.semanticweb.org/bimmer/ob#TimeOfDay">Time Of Day</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Fall">
+      <h3>fall<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Fall</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Season" title="http://www.semanticweb.org/bimmer/ob#Season">Season</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/time#Friday">
+      <h3>friday<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/time#Friday</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/time#DayOfWeek" title="http://www.w3.org/2006/time#DayOfWeek">Day of The Week</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ISOAdaptiveComfort">
+      <h3>i s o adaptive comfort<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#ISOAdaptiveComfort</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#StandardThermalEnvelop"
+               title="http://www.semanticweb.org/bimmer/ob#StandardThermalEnvelop">Standard Comfort Envelop</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Midnight">
+      <h3>midnight<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Midnight</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#TimeOfDay" title="http://www.semanticweb.org/bimmer/ob#TimeOfDay">Time Of Day</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/time#Monday">
+      <h3>monday<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/time#Monday</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/time#DayOfWeek" title="http://www.w3.org/2006/time#DayOfWeek">Day of The Week</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Morning">
+      <h3>morning<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Morning</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#TimeOfDay" title="http://www.semanticweb.org/bimmer/ob#TimeOfDay">Time Of Day</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Noon">
+      <h3>noon<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Noon</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#TimeOfDay" title="http://www.semanticweb.org/bimmer/ob#TimeOfDay">Time Of Day</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/time#Saturday">
+      <h3>saturday<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/time#Saturday</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/time#DayOfWeek" title="http://www.w3.org/2006/time#DayOfWeek">Day of The Week</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Spring">
+      <h3>spring<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Spring</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Season" title="http://www.semanticweb.org/bimmer/ob#Season">Season</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Summer">
+      <h3>summer<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Summer</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Season" title="http://www.semanticweb.org/bimmer/ob#Season">Season</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/time#Sunday">
+      <h3>sunday<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/time#Sunday</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/time#DayOfWeek" title="http://www.w3.org/2006/time#DayOfWeek">Day of The Week</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/time#Thursday">
+      <h3>thursday<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/time#Thursday</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/time#DayOfWeek" title="http://www.w3.org/2006/time#DayOfWeek">Day of The Week</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/time#Tuesday">
+      <h3>tuesday<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/time#Tuesday</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/time#DayOfWeek" title="http://www.w3.org/2006/time#DayOfWeek">Day of The Week</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2006/time#Wednesday">
+      <h3>wednesday<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2006/time#Wednesday</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2006/time#DayOfWeek" title="http://www.w3.org/2006/time#DayOfWeek">Day of The Week</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Winter">
+      <h3>winter<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Winter</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Season" title="http://www.semanticweb.org/bimmer/ob#Season">Season</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
    </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>

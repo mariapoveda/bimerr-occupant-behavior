@@ -7,11 +7,8 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:elements="http://purl.org/dc/elements/1.1">
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.semanticweb.org/bimmer/ob#">
-        <elements:publisher rdf:resource="http://www.oeg-upm.net/"/>
-        <elements:title xml:lang="en">Ontology model for Occupancy Behavior</elements:title>
         <terms:creator rdf:resource="http://www.semanticweb.org/bimmer/ob"/>
         <terms:license xml:lang="en"></terms:license>
         <rdfs:comment xml:lang="en">This ontology aims to model the Occupancy Behavior domain according to the obXML schema (https://behavior.lbl.gov/?q=obXML)</rdfs:comment>
@@ -29,20 +26,6 @@
      -->
 
 
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1publisher -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1publisher"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1title -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1title"/>
     
 
 
@@ -93,42 +76,40 @@
     
 
 
-    <!-- http://www.semanticweb.org/bimmer/ob#definedByEvent -->
+    <!-- http://www.semanticweb.org/bimmer/ob#definedByEnvelop -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#definedByEvent">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#EventSpecification"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#DriverEvent"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#definedByEnvelop">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#ThermalNeed"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#ThermalComfortEnvelop"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/bimmer/ob#definedByParameterRange -->
+    <!-- http://www.semanticweb.org/bimmer/ob#definedByRange -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#definedByParameterRange">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#definedByRange">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#ParameterRange"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/bimmer/ob#definedBySpace -->
+    <!-- http://www.semanticweb.org/bimmer/ob#detailedBy -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#definedBySpace">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#SpaceOccupancySpecification"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#Space"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#detailedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/bimmer/ob#hasAction -->
+    <!-- http://www.semanticweb.org/bimmer/ob#drivenBy -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#hasAction">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#Behavior"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#Action"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#drivenBy"/>
     
 
 
@@ -142,44 +123,29 @@
     
 
 
+    <!-- http://www.semanticweb.org/bimmer/ob#hasBuildingType -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#hasBuildingType"/>
+    
+
+
     <!-- http://www.semanticweb.org/bimmer/ob#hasCoefficient -->
 
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#hasCoefficient">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#InteractionFormula"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#CoefficientSchema"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/bimmer/ob#hasDriver -->
+    <!-- http://www.semanticweb.org/bimmer/ob#hasDayOfWeek -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#hasDriver">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#Behavior"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#Driver"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/bimmer/ob#hasDriverTime -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#hasDriverTime">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#hasDayOfWeek">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#Driver"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#DriverTime"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/bimmer/ob#hasEnvironment -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#hasEnvironment">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#Driver"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#Environment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#DriverTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#DayOfWeek"/>
     </owl:ObjectProperty>
     
 
@@ -199,7 +165,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#hasIndependentVariable">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#InteractionFormula"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"/>
     </owl:ObjectProperty>
     
 
@@ -214,16 +179,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/bimmer/ob#hasNeed -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#hasNeed">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#Behavior"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#Need"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/bimmer/ob#hasOccupant -->
 
 
@@ -234,11 +189,13 @@
     
 
 
-    <!-- http://www.semanticweb.org/bimmer/ob#hasSchedule -->
+    <!-- http://www.semanticweb.org/bimmer/ob#hasSeason -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#hasSchedule">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#Schedule"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#hasSeason">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#DriverTime"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#Season"/>
     </owl:ObjectProperty>
     
 
@@ -253,6 +210,13 @@
     
 
 
+    <!-- http://www.semanticweb.org/bimmer/ob#hasSpaceType -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#hasSpaceType"/>
+    
+
+
     <!-- http://www.semanticweb.org/bimmer/ob#hasSystem -->
 
 
@@ -263,12 +227,23 @@
     
 
 
-    <!-- http://www.semanticweb.org/bimmer/ob#hasThermalComfortEnvelop -->
+    <!-- http://www.semanticweb.org/bimmer/ob#hasTimeOfDay -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#hasThermalComfortEnvelop">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#ThermalNeed"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#ThermalComfortEnvelop"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#hasTimeOfDay">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#DriverTime"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#TimeOfDay"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bimmer/ob#influencedByEnvironment -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#influencedByEnvironment">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#Driver"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#Environment"/>
     </owl:ObjectProperty>
     
 
@@ -283,44 +258,74 @@
     
 
 
-    <!-- http://www.semanticweb.org/bimmer/ob#interactWith -->
+    <!-- http://www.semanticweb.org/bimmer/ob#influencedByNeed -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#interactWith">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#Behavior"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#System"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#influencedByNeed">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#Need"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/bimmer/ob#modeledByFormula -->
+    <!-- http://www.semanticweb.org/bimmer/ob#interactsWith -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#modeledByFormula">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#interactsWith"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bimmer/ob#leadsTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#leadsTo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bimmer/ob#modeledBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#modeledBy">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#Interaction"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#InteractionFormula"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/bimmer/ob#modeledByModel -->
+    <!-- http://www.semanticweb.org/bimmer/ob#occursAt -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#modeledByModel">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#Movement"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#MovementModel"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#occursAt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#Driver"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#DriverTime"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/bimmer/ob#occursWithinSpace -->
+    <!-- http://www.semanticweb.org/bimmer/ob#occursIn -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#occursWithinSpace">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#occursIn">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#Driver"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#Space"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bimmer/ob#operationMode -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#operationMode">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#System"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bimmer/ob#programmedAt -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#programmedAt">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#Schedule"/>
     </owl:ObjectProperty>
     
 
@@ -341,16 +346,14 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#specifiedBy">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#MovementModel"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#MovementSpecification"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/bimmer/ob#triggeredByEvent -->
+    <!-- http://www.semanticweb.org/bimmer/ob#triggeredBy -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#triggeredByEvent">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#triggeredBy">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#Driver"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#DriverEvent"/>
     </owl:ObjectProperty>
@@ -401,70 +404,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/bimmer/ob#controlType -->
+    <!-- http://www.semanticweb.org/bimmer/ob#controlValue -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bimmer/ob#controlType">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#System"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/bimmer/ob#dayOfWeek -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bimmer/ob#dayOfWeek">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#DriverTime"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>Friday</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Monday</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>Saturday</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>Sunday</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>Thursday</rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                <rdf:first>Tuesday</rdf:first>
-                                                                <rdf:rest>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                        <rdf:first>Wednesday</rdf:first>
-                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                                    </rdf:Description>
-                                                                </rdf:rest>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bimmer/ob#controlValue"/>
     
 
 
@@ -482,7 +425,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bimmer/ob#duration">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
@@ -503,16 +446,6 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bimmer/ob#identifier">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/bimmer/ob#interactionType -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bimmer/ob#interactionType">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#Interaction"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -545,6 +478,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bimmer/ob#meetingProbability">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#Meeting"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
@@ -656,130 +590,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/bimmer/ob#seasonTime -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bimmer/ob#seasonTime">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#DriverTime"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>All</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Fall</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>Spring</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>Summer</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>Winter</rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/bimmer/ob#spaceType -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bimmer/ob#spaceType">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#Space"/>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                        <rdf:first>Corridor</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>MeetingRoom</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>Office</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>OfficePrivate</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>OfficeShared</rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                <rdf:first>Other</rdf:first>
-                                                                <rdf:rest>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                        <rdf:first>Outdoor</rdf:first>
-                                                                        <rdf:rest>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                <rdf:first>ResidentialOwn</rdf:first>
-                                                                                <rdf:rest>
-                                                                                    <rdf:Description>
-                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                        <rdf:first>ResidentialRent</rdf:first>
-                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                                                    </rdf:Description>
-                                                                                </rdf:rest>
-                                                                            </rdf:Description>
-                                                                        </rdf:rest>
-                                                                    </rdf:Description>
-                                                                </rdf:rest>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/bimmer/ob#standardType -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bimmer/ob#standardType">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#StandardThermalEnvelop"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.semanticweb.org/bimmer/ob#startTime -->
 
 
@@ -791,13 +601,22 @@
     
 
 
-    <!-- http://www.semanticweb.org/bimmer/ob#timeOfDay -->
+    <!-- http://www.semanticweb.org/bimmer/ob#typicalTime -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bimmer/ob#timeOfDay">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bimmer/ob#typicalTime">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#DriverTime"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#EventSpecification"/>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </rdf:Description>
     
 
 
@@ -820,7 +639,7 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#PhysicalNeed"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#definedByParameterRange"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#definedByRange"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#ParameterRange"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -833,7 +652,7 @@
 
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Action">
-        <rdfs:comment xml:lang="en">The action the occupant performs to satisfy its need.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Actions are the interactions with systems or activities that occupants can perform to achieve environmental comfort.</rdfs:comment>
         <rdfs:label xml:lang="en">Action</rdfs:label>
     </owl:Class>
     
@@ -845,26 +664,32 @@
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Behavior">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#hasAction"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#leadsTo"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#Action"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#hasDriver"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#drivenBy"/>
                 <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#Driver"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#hasNeed"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#influencedByNeed"/>
                 <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#Need"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#interactWith"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#interactsWith"/>
                 <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#System"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#identifier"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -885,6 +710,12 @@
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Building">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#hasBuildingType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#BuildingType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#hasSpace"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#Space"/>
             </owl:Restriction>
@@ -898,7 +729,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#identifier"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -916,6 +747,13 @@
         <rdfs:comment xml:lang="en">Building where the occupancy behaviors occur.</rdfs:comment>
         <rdfs:label xml:lang="en">Building</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bimmer/ob#BuildingType -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#BuildingType"/>
     
 
 
@@ -946,8 +784,16 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#ConstantValueFormula">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#InteractionFormula"/>
+        <rdfs:comment xml:lang="en">Class to represent mathematical formulas of the type Constant Value.</rdfs:comment>
         <rdfs:label xml:lang="en">Constant Value Formula</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bimmer/ob#ControlType -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#ControlType"/>
     
 
 
@@ -968,35 +814,29 @@
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Driver">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#hasDriverTime"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#DriverTime"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#hasEnvironment"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#influencedByEnvironment"/>
                 <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#Environment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#influencedByHabit"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#Habit"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#occursAt"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#DriverTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#occursWithinSpace"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#occursIn"/>
                 <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#Space"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#triggeredByEvent"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#triggeredBy"/>
                 <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#DriverEvent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Circumstances that motivate the occupant behavior.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Drivers represent the environmental factors that stimulate occupants to fulfill a physical, physiological or psychological need.</rdfs:comment>
         <rdfs:label xml:lang="en">Driver</rdfs:label>
     </owl:Class>
     
@@ -1017,128 +857,20 @@
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#DriverTime">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#dayOfWeek"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Friday</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>Monday</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>Saturday</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>Sunday</rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                <rdf:first>Thursday</rdf:first>
-                                                                <rdf:rest>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                        <rdf:first>Tuesday</rdf:first>
-                                                                        <rdf:rest>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                <rdf:first>Wednesday</rdf:first>
-                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                                            </rdf:Description>
-                                                                        </rdf:rest>
-                                                                    </rdf:Description>
-                                                                </rdf:rest>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#hasDayOfWeek"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#DayOfWeek"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#seasonTime"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>All</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>Fall</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>Spring</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>Summer</rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                <rdf:first>Winter</rdf:first>
-                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#hasSeason"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#Season"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#timeOfDay"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>evening</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>midnight</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>morning</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>noon</rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#hasTimeOfDay"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#TimeOfDay"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">N-ary class to define the time, day and season when a specific driver occurs.</rdfs:comment>
@@ -1176,7 +908,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#identifier"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1208,12 +940,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Equipment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#System"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#controlType"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>Class to represent equipments the occupant interact with but do not influence the environment. These systems also contribute in the energy performance analysis.</rdfs:comment>
         <rdfs:label xml:lang="en">Equipment</rdfs:label>
     </owl:Class>
@@ -1227,16 +953,23 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#MovementSpecification"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#definedByEvent"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#detailedBy"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#DriverEvent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#hasSchedule"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#programmedAt"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#Schedule"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#typicalTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/bimmer/ob#SpaceOccupancySpecification"/>
         <rdfs:label xml:lang="en">Event Specification</rdfs:label>
     </owl:Class>
     
@@ -1258,34 +991,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#HVAC">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#System"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#controlType"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>controllable</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>zonal cotrollable</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>zonal fixed</rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">HVAC</rdfs:label>
     </owl:Class>
     
@@ -1308,7 +1013,7 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#PhysicalNeed"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#definedByParameterRange"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#definedByRange"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#ParameterRange"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1344,7 +1049,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Inaction">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#Action"/>
-        <rdfs:comment xml:lang="en">The Inaction class represents the decision of an occupant to not act and remain uncomfortable within a space</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Inaction class represents the decision of an occupant to not act and remain uncomfortable within a space.</rdfs:comment>
         <rdfs:label xml:lang="en">Inaction</rdfs:label>
     </owl:Class>
     
@@ -1357,20 +1062,14 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#Action"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#modeledByFormula"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#modeledBy"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#InteractionFormula"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#description"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#interactionType"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#controlValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The Interaction class represents the interaction of the occupant with the systems within the space to recover its comfort.</rdfs:comment>
@@ -1401,6 +1100,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Formula to model the probability of interaction between ocupant and system.</rdfs:comment>
         <rdfs:label xml:lang="en">Interaction Formula</rdfs:label>
     </owl:Class>
     
@@ -1411,40 +1111,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Light">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#System"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#controlType"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>dimmable</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>on/off</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>three steps</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>two steps</rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Light</rdfs:label>
     </owl:Class>
     
@@ -1455,6 +1121,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Linear1DFormula">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#InteractionFormula"/>
+        <rdfs:comment xml:lang="en">Class to represent mathematical formulas of the type Linear 1D.</rdfs:comment>
         <rdfs:label xml:lang="en">Linear 1D Formula</rdfs:label>
     </owl:Class>
     
@@ -1465,6 +1132,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Linear2DFormula">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#InteractionFormula"/>
+        <rdfs:comment xml:lang="en">Class to represent mathematical formulas of the type Linear 2D.</rdfs:comment>
         <rdfs:label xml:lang="en">Linear 2D Formula</rdfs:label>
     </owl:Class>
     
@@ -1475,6 +1143,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Linear3DFormula">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#InteractionFormula"/>
+        <rdfs:comment xml:lang="en">Class to represent mathematical formulas of the type Linear 3D.</rdfs:comment>
         <rdfs:label xml:lang="en">Linear 3D Formula</rdfs:label>
     </owl:Class>
     
@@ -1485,6 +1154,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Logit2DLinearFormula">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#InteractionFormula"/>
+        <rdfs:comment xml:lang="en">Class to represent mathematical formulas of the type Logit 2D Linear.</rdfs:comment>
         <rdfs:label xml:lang="en">Logit 2D Linear Formula</rdfs:label>
     </owl:Class>
     
@@ -1495,6 +1165,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Logit3DLinearFormula">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#InteractionFormula"/>
+        <rdfs:comment xml:lang="en">Class to represent mathematical formulas of the type Logit 3D Linear.</rdfs:comment>
         <rdfs:label xml:lang="en">Logit 3D Linear Formula</rdfs:label>
     </owl:Class>
     
@@ -1505,6 +1176,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Logit4DLinearFormula">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#InteractionFormula"/>
+        <rdfs:comment xml:lang="en">Class to represent mathematical formulas of the type Logit 4D Linear.</rdfs:comment>
         <rdfs:label xml:lang="en">Logit 4D Linear Formula</rdfs:label>
     </owl:Class>
     
@@ -1516,14 +1188,14 @@
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Meeting">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#hasSchedule"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#programmedAt"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#Schedule"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#meetingProbability"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Class to represent a meeting inside a communal space.</rdfs:comment>
@@ -1539,7 +1211,7 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#Action"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#modeledByModel"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#modeledBy"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#MovementModel"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1559,6 +1231,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#MovementSpecification"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Model to define ocuppants movements inside a space</rdfs:comment>
         <rdfs:label xml:lang="en">Movement Model</rdfs:label>
     </owl:Class>
     
@@ -1568,6 +1241,7 @@
 
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#MovementSpecification">
+        <rdfs:comment xml:lang="en">Class to represent the data needed to model movements inside a space.</rdfs:comment>
         <rdfs:label xml:lang="en">Movement Specification</rdfs:label>
     </owl:Class>
     
@@ -1577,6 +1251,7 @@
 
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Need">
+        <rdfs:comment xml:lang="en">Needs represent the physical and non-physical requirements of the occupant that must be met in order to ensure satisfaction with their environment.</rdfs:comment>
         <rdfs:label xml:lang="en">Need</rdfs:label>
     </owl:Class>
     
@@ -1599,6 +1274,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#NonPhysicalNeed">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#Need"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/bimmer/ob#PhysicalNeed"/>
+        <rdfs:comment xml:lang="en">Non physical comfort need that could lead to a behavior, such as privacy, schedule, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Non Physical Need</rdfs:label>
     </owl:Class>
     
@@ -1611,7 +1287,7 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#ThermalComfortEnvelop"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#definedByParameterRange"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#definedByRange"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#ParameterRange"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1633,8 +1309,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#hasBehavior"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#Behavior"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#identifier"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1685,12 +1367,6 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#relatedTo"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#maxRangeValue"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
@@ -1701,7 +1377,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">N-ary class to represent the minimum and maximm comfort values for an occupant.</rdfs:comment>
+        <rdfs:comment xml:lang="en">N-ary class to represent the minimum and maximm comfort values with respect to an environmental parameter.</rdfs:comment>
         <rdfs:label xml:lang="en">Parameter Range</rdfs:label>
     </owl:Class>
     
@@ -1712,6 +1388,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#PhysicalNeed">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#Need"/>
+        <rdfs:comment xml:lang="en">Physical comfort need that could lead to a behavior.</rdfs:comment>
         <rdfs:label xml:lang="en">Physical Need</rdfs:label>
     </owl:Class>
     
@@ -1722,6 +1399,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Quadratic1DFormula">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#InteractionFormula"/>
+        <rdfs:comment xml:lang="en">Class to represent mathematical formulas of the type Quadratic 1D Linear.</rdfs:comment>
         <rdfs:label xml:lang="en">Quadratic 1D Formula</rdfs:label>
     </owl:Class>
     
@@ -1767,7 +1445,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#duration"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1782,7 +1460,28 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">N-ary class to represent the duration, start time and end time of an event.</rdfs:comment>
         <rdfs:label xml:lang="en">Schedule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bimmer/ob#Season -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Season">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#All"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Fall"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Spring"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Summer"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Winter"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">Season</rdfs:label>
     </owl:Class>
     
 
@@ -1792,28 +1491,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Shade">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#System"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#controlType"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>adjustable</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>fixed</rdf:first>
-                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Shade</rdfs:label>
     </owl:Class>
     
@@ -1836,6 +1513,12 @@
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Space">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#hasSpaceType"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#SpaceType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#hasMeeting"/>
                 <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#Meeting"/>
             </owl:Restriction>
@@ -1855,71 +1538,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#identifier"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#spaceType"/>
-                <owl:someValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Corridor</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>MeetingRoom</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>Office</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>OfficePrivate</rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                <rdf:first>OfficeShared</rdf:first>
-                                                                <rdf:rest>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                        <rdf:first>Other</rdf:first>
-                                                                        <rdf:rest>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                <rdf:first>Outdoor</rdf:first>
-                                                                                <rdf:rest>
-                                                                                    <rdf:Description>
-                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                        <rdf:first>ResidentialOwn</rdf:first>
-                                                                                        <rdf:rest>
-                                                                                            <rdf:Description>
-                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                                <rdf:first>ResidentialRent</rdf:first>
-                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                                                            </rdf:Description>
-                                                                                        </rdf:rest>
-                                                                                    </rdf:Description>
-                                                                                </rdf:rest>
-                                                                            </rdf:Description>
-                                                                        </rdf:rest>
-                                                                    </rdf:Description>
-                                                                </rdf:rest>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:someValuesFrom>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1940,70 +1559,6 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#spaceType"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>Corridor</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>MeetingRoom</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>Office</rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first>OfficePrivate</rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                <rdf:first>OfficeShared</rdf:first>
-                                                                <rdf:rest>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                        <rdf:first>Other</rdf:first>
-                                                                        <rdf:rest>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                <rdf:first>Outdoor</rdf:first>
-                                                                                <rdf:rest>
-                                                                                    <rdf:Description>
-                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                        <rdf:first>ResidentialOwn</rdf:first>
-                                                                                        <rdf:rest>
-                                                                                            <rdf:Description>
-                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                                <rdf:first>ResidentialRent</rdf:first>
-                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                                                            </rdf:Description>
-                                                                                        </rdf:rest>
-                                                                                    </rdf:Description>
-                                                                                </rdf:rest>
-                                                                            </rdf:Description>
-                                                                        </rdf:rest>
-                                                                    </rdf:Description>
-                                                                </rdf:rest>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>Class to represent the different spaces the building have and where the occupant behaviors occur.</rdfs:comment>
         <rdfs:label xml:lang="en">Space</rdfs:label>
     </owl:Class>
@@ -2017,7 +1572,7 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#MovementSpecification"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#definedBySpace"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#detailedBy"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#Space"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2038,67 +1593,27 @@
     
 
 
+    <!-- http://www.semanticweb.org/bimmer/ob#SpaceType -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#SpaceType"/>
+    
+
+
     <!-- http://www.semanticweb.org/bimmer/ob#StandardThermalEnvelop -->
 
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#StandardThermalEnvelop">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#ASHRAEAdaptiveComfort"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#ASHRAEComfortEnvelop"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#ISOAdaptiveComfort"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#ThermalComfortEnvelop"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#standardType"/>
-                <owl:someValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>ASHRAE Adaptive Comfort</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>ASHRAE Comfort Envelop</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>ISO Adaptive Comfort</rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#standardType"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>ASHRAE Adaptive Comfort</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>ASHRAE Comfort Envelop</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first>ISO Adaptive Comfort</rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Standard Comfort Envelop</rdfs:label>
     </owl:Class>
     
@@ -2110,10 +1625,17 @@
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#System">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#operationMode"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#ControlType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#identifier"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">System refer to the equipment or mechanisms within the building with which occupants may interact with to restore or maintain environmental comfort.</rdfs:comment>
         <rdfs:label xml:lang="en">System</rdfs:label>
     </owl:Class>
     
@@ -2146,7 +1668,7 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#PhysicalNeed"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#hasThermalComfortEnvelop"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#definedByEnvelop"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#ThermalComfortEnvelop"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2160,29 +1682,26 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Thermostat">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#System"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#controlType"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>adjustable</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>fixed</rdf:first>
-                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Thermostat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bimmer/ob#TimeOfDay -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#TimeOfDay">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Evening"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Midnight"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Morning"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Noon"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">Time Of Day</rdfs:label>
     </owl:Class>
     
 
@@ -2194,7 +1713,7 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#PhysicalNeed"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#definedByParameterRange"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#definedByRange"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#ParameterRange"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2208,6 +1727,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Weibull1DFormula">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#InteractionFormula"/>
+        <rdfs:comment xml:lang="en">Class to represent mathematical formulas of the type Weibull 1D.</rdfs:comment>
         <rdfs:label xml:lang="en">Weibull 1D Formula</rdfs:label>
     </owl:Class>
     
@@ -2218,30 +1738,213 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Window">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#System"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/bimmer/ob#controlType"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:oneOf>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                <rdf:first>fixed</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                        <rdf:first>operable</rdf:first>
-                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </owl:oneOf>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Window</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DayOfWeek -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#DayOfWeek">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2006/time#Friday"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2006/time#Monday"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2006/time#Saturday"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2006/time#Sunday"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2006/time#Thursday"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2006/time#Tuesday"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2006/time#Wednesday"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">Day of The Week</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/bimmer/ob#ASHRAEAdaptiveComfort -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bimmer/ob#ASHRAEAdaptiveComfort">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bimmer/ob#StandardThermalEnvelop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bimmer/ob#ASHRAEComfortEnvelop -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bimmer/ob#ASHRAEComfortEnvelop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bimmer/ob#StandardThermalEnvelop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bimmer/ob#All -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bimmer/ob#All">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bimmer/ob#Season"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bimmer/ob#Evening -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bimmer/ob#Evening">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bimmer/ob#TimeOfDay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bimmer/ob#Fall -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bimmer/ob#Fall">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bimmer/ob#Season"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bimmer/ob#ISOAdaptiveComfort -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bimmer/ob#ISOAdaptiveComfort">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bimmer/ob#StandardThermalEnvelop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bimmer/ob#Midnight -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bimmer/ob#Midnight">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bimmer/ob#TimeOfDay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bimmer/ob#Morning -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bimmer/ob#Morning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bimmer/ob#TimeOfDay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bimmer/ob#Noon -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bimmer/ob#Noon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bimmer/ob#TimeOfDay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bimmer/ob#Spring -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bimmer/ob#Spring">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bimmer/ob#Season"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bimmer/ob#Summer -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bimmer/ob#Summer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bimmer/ob#Season"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/bimmer/ob#Winter -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/bimmer/ob#Winter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/bimmer/ob#Season"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Friday -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Friday">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DayOfWeek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Monday -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Monday">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DayOfWeek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Saturday -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Saturday">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DayOfWeek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Sunday -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Sunday">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DayOfWeek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Thursday -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Thursday">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DayOfWeek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Tuesday -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Tuesday">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DayOfWeek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Wednesday -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2006/time#Wednesday">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DayOfWeek"/>
+    </owl:NamedIndividual>
     
 
 
@@ -2254,6 +1957,29 @@
      -->
 
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#AccousticNeed"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#IAQNeed"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#ThermalNeed"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#VisualNeed"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#ConstantValueFormula"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Linear1DFormula"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Linear2DFormula"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Linear3DFormula"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Logit2DLinearFormula"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Logit3DLinearFormula"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Logit4DLinearFormula"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Quadratic1DFormula"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Weibull1DFormula"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
@@ -2278,6 +2004,23 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Thermostat"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Window"/>
         </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Inaction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Interaction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Movement"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#Report"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#ASHRAEAdaptiveComfort"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#ASHRAEComfortEnvelop"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/bimmer/ob#ISOAdaptiveComfort"/>
+        </owl:distinctMembers>
     </rdf:Description>
 </rdf:RDF>
 
